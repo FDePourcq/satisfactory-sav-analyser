@@ -1,0 +1,1515 @@
+digraph 123 { node [shape=box,fontname="Bitstream Vera Sans Mono", penwidth=5];  
+93912535305824 -> 294817;
+
+93912535305824 [color="0 0.3 0.8", label="6 X Build_FrackingExtractor_C\lcircuit 0\l\lPos: -43758.8 -8409.4 25138.9\l\lInputs:FGPipeConnectionFactory->294817\l" ];
+93912535865296 -> 294841;
+
+93912535865296 [color="0 0.3 0.8", label="25 X Build_FrackingExtractor_C\lcircuit 0\l\lPos: 215726 132791 -285\l\lInputs:FGPipeConnectionFactory->294841\l" ];
+93912535319808 [color="0.230769 0.607692 0.830769", label="12 X Build_GeneratorFuel_C\lcircuit 24\l\lPos: -117547 245655 8783.02\l\lInputs:" ];
+240602 -> 93912535318976;
+
+93912535318976 [color="0.230769 0.607692 0.830769", label="64 X Build_GeneratorFuel_C\lcircuit 24\l\lPos: -113242 248712 8783.02\l240602 \lInputs:" ];
+93912535906352 [color="0.384615 0.546154 0.984615", label="19 X Build_GeneratorGeoThermal_C\lcircuit 14\l\lPos: -76923.9 166918 -5469.22\l\lInputs:" ];
+93912535843696 [color="0.230769 0.607692 0.830769", label="19 X Build_GeneratorGeoThermal_C\lcircuit 24\l\lPos: 202233 45027 -1256.78\l\lInputs:" ];
+93912535599888 [color="0 0.3 0.8", label="2 X Build_GeneratorIntegratedBiomass_C\lcircuit 0\l\lPos: -69406.1 220782 4370.68\l\lInputs:" ];
+93912537077984 -> 299684;
+
+299045 -> 93912537077984;
+
+299683 -> 93912537077984;
+
+93912537077984 [color="0.230769 0.607692 0.830769", label="30 X Build_GeneratorNuclear_C\lcircuit 24\l\lPos: 65122.5 97760.6 11583\l299045 299683 \lInputs:Output0->299684\l" ];
+93912537177792 -> 299684;
+
+299683 -> 93912537177792;
+
+299685 -> 93912537177792;
+
+93912537177792 [color="0.230769 0.607692 0.830769", label="80 X Build_GeneratorNuclear_C\lcircuit 24\l\lPos: 160804 193880 -7617.52\l299683 299685 \lInputs:Output0->299684\l" ];
+93912535449680 [color="0 0.3 0.8", label="1 X Build_MinerMk2_C\lcircuit 0\l\lPos: 571.742 283802 -1079.03\l\lInputs:" ];
+93912535562304 -> 298588;
+
+93912535562304 [color="0.230769 0.607692 0.830769", label="2 X Build_MinerMk2_C\lcircuit 24\l\lPos: 4127.77 273242 -4063.68\l\lInputs:Output0->298588\l" ];
+93912537087632 [color="0 0.3 0.8", label="1 X Build_MinerMk3_C\lcircuit 0\l\lPos: -21265.1 283148 -2479.86\l\lInputs:" ];
+93912535447664 -> 298588;
+
+93912535447664 [color="0 0.3 0.8", label="1 X Build_MinerMk3_C\lcircuit 0\l\lPos: -8700.85 283440 -1062.81\l\lInputs:Output0->298588\l" ];
+93912537110800 [color="0 0.3 0.8", label="1 X Build_MinerMk3_C\lcircuit 0\l\lPos: 168713 50839.2 49.8763\l\lInputs:Output0->298799\l" ];
+93912535863568 -> 298609;
+
+93912535863568 [color="0.230769 0.607692 0.830769", label="2 X Build_MinerMk3_C\lcircuit 24\l\lPos: -66076.5 296871 -5961.1\l\lInputs:Output0->298609\l" ];
+93912535317312 [color="0.230769 0.607692 0.830769", label="1 X Build_MinerMk3_C\lcircuit 24\l\lPos: -92343.3 281606 -4573.23\l\lInputs:Output0->298649\l" ];
+93912535313376 -> 298654;
+
+93912535313376 [color="0.230769 0.607692 0.830769", label="2 X Build_MinerMk3_C\lcircuit 24\l\lPos: -53615.4 160376 3400.66\l\lInputs:Output0->298654\l" ];
+93912535273312 -> 298669;
+
+93912535273312 [color="0.230769 0.607692 0.830769", label="2 X Build_MinerMk3_C\lcircuit 24\l\lPos: 34655 284303 1035.08\l\lInputs:Output0->298669\l" ];
+93912537185376 [color="0.230769 0.607692 0.830769", label="1 X Build_MinerMk3_C\lcircuit 24\l\lPos: 181999 114342 10299.7\l\lInputs:Output0->298674\l" ];
+93912534890336 [color="0.230769 0.607692 0.830769", label="1 X Build_MinerMk3_C\lcircuit 24\l\lPos: -60960.9 96171.1 21234.1\l\lInputs:Output0->298709\l" ];
+93912535307232 -> 298724;
+
+93912535307232 [color="0.230769 0.607692 0.830769", label="7 X Build_MinerMk3_C\lcircuit 24\l\lPos: 244102 -27296.8 8806.59\l\lInputs:Output0->298724\l" ];
+93912537097216 -> 298739;
+
+93912537097216 [color="0.230769 0.607692 0.830769", label="5 X Build_MinerMk3_C\lcircuit 24\l\lPos: 406182 -206883 -1684.88\l\lInputs:Output0->298739\l" ];
+93912537178656 [color="0.230769 0.607692 0.830769", label="1 X Build_MinerMk3_C\lcircuit 24\l\lPos: 38000.2 91736 -4768.96\l\lInputs:Output0->298749\l" ];
+93912535598544 -> 298759;
+
+93912535598544 [color="0.230769 0.607692 0.830769", label="6 X Build_MinerMk3_C\lcircuit 24\l\lPos: 149937 4686.47 15497.3\l\lInputs:Output0->298759\l" ];
+93912537094144 -> 298774;
+
+93912537094144 [color="0.230769 0.607692 0.830769", label="2 X Build_MinerMk3_C\lcircuit 24\l\lPos: 296500 13253.5 -801.694\l\lInputs:Output0->298774\l" ];
+93912535468592 -> 298794;
+
+93912535468592 [color="0.230769 0.607692 0.830769", label="6 X Build_MinerMk3_C\lcircuit 24\l\lPos: -164443 171772 1615.32\l\lInputs:Output0->298794\l" ];
+93912535308928 -> 298805;
+
+93912535308928 [color="0.230769 0.607692 0.830769", label="7 X Build_MinerMk3_C\lcircuit 24\l\lPos: -5633.59 44274.1 21108.7\l\lInputs:Output0->298805\l" ];
+93912535466832 -> 294817;
+
+93912535466832 [color="0.230769 0.607692 0.830769", label="5 X Build_OilPump_C\lcircuit 24\l\lPos: 49638.5 655.758 13149.6\l\lInputs:FGPipeConnectionFactory->294817\l" ];
+93912537208928 [color="0 0.3 0.8", label="128 X Build_WaterPump_C\lcircuit 0\l\lPos: -242994 207382 -1756.09\l\lInputs:" ];
+93912535290016 -> 298572;
+
+93912535290016 [color="0 0.3 0.8", label="55 X Build_WaterPump_C\lcircuit 0\l\lPos: -245398 203390 -1755\l\lInputs:FGPipeConnectionFactory->298572\l" ];
+93912535274112 [color="0.230769 0.607692 0.830769", label="2 X Build_WaterPump_C\lcircuit 24\l\lPos: -236588 208788 -1756.09\l\lInputs:" ];
+93912535359088 -> 296645;
+
+93912535359088 [color="0.230769 0.607692 0.830769", label="63 X Build_WaterPump_C\lcircuit 24\l\lPos: -136590 220774 -1756.09\l\lInputs:FGPipeConnectionFactory->296645\l" ];
+93912535312672 -> 298572;
+
+93912535312672 [color="0.230769 0.607692 0.830769", label="297 X Build_WaterPump_C\lcircuit 24\l\lPos: -196191 203389 -1756.09\l\lInputs:FGPipeConnectionFactory->298572\l" ];
+93912535303616 -> 299045;
+
+93912535303616 [color="0.230769 0.607692 0.830769", label="102 X Build_WaterPump_C\lcircuit 24\l\lPos: 39418.5 89844.3 9800.21\l\lInputs:FGPipeConnectionFactory->299045\l" ];
+93912535451024 -> 299685;
+
+93912535451024 [color="0.230769 0.607692 0.830769", label="233 X Build_WaterPump_C\lcircuit 24\l\lPos: 165006 218589 -9350\l\lInputs:FGPipeConnectionFactory->299685\l" ];
+93912535683984 -> 283433;
+
+283435 -> 93912535683984;
+
+285839 -> 93912535683984;
+
+93912535683984 [color="0.230769 0.607692 0.830769", label="36 X AI Limiter (3600%)\lcircuit 24\l-   5  25.00   900.00 Copper Sheet\l-  20 100.00  3600.00 Quickwire\l+   1   5.00   180.00 AI Limiter\l\lPos: -70796.1 273280 5582.56\l283435 285839 \lInputs:Output0->283433\l" ];
+93912535343728 -> 289885;
+
+287253 -> 93912535343728;
+
+294592 -> 93912535343728;
+
+93912535343728 [color="0.230769 0.607692 0.830769", label="72 X Alternate: Adhered Iron Plate (7200%)\lcircuit 24\l-   3  11.25   810.00 Iron Plate\l-   1   3.75   270.00 Rubber\l+   1   3.75   270.00 Reinforced Iron Plate\l\lPos: -24196.1 220680 5582.56\l287253 294592 \lInputs:Output0->289885\l" ];
+93912537079280 -> 284699;
+
+288525 -> 93912537079280;
+
+294592 -> 93912537079280;
+
+93912537079280 [color="0.230769 0.607692 0.830769", label="35 X Alternate: Insulated Cable (3500%)\lcircuit 24\l-   9  45.00  1575.00 Wire\l-   6  30.00  1050.00 Rubber\l+  20 100.00  3500.00 Cable\l\lPos: -54862.4 245028 2383.1\l288525 294592 \lInputs:Output0->284699\l" ];
+93912535463232 -> 284699;
+
+294592 -> 93912535463232;
+
+93912535463232 [color="0.230769 0.607692 0.830769", label="1 X Alternate: Insulated Cable (100%)\lcircuit 24\l-   9  45.00    45.00 Wire\l-   6  30.00    30.00 Rubber\l+  20 100.00   100.00 Cable\l\lPos: -58362.5 238966 2383.1\l294592 \lInputs:Output0->284699\l" ];
+93912535463920 -> 275939;
+
+283435 -> 93912535463920;
+
+285883 -> 93912535463920;
+
+93912535463920 [color="0.230769 0.607692 0.830769", label="72 X Alternate: Silicon Circuit Board (7200%)\lcircuit 24\l-  11  27.50  1980.00 Silica\l-  11  27.50  1980.00 Copper Sheet\l+   5  12.50   900.00 Circuit Board\l\lPos: -93340.3 260617 5583.04\l283435 285883 \lInputs:Output0->275939\l" ];
+93912535292544 -> 261099;
+
+267971 -> 93912535292544;
+
+288525 -> 93912535292544;
+
+294582 -> 93912535292544;
+
+298669 -> 93912535292544;
+
+93912535292544 [color="0.230769 0.607692 0.830769", label="2 X Alternate: Classic Battery (200%)\lcircuit 24\l-  12  90.00   180.00 Wire\l-   7  52.50   105.00 Alclad Aluminum Sheet\l-   8  60.00   120.00 Plastic\l-   6  45.00    90.00 Sulfur\l+   4  30.00    60.00 Battery\l\lPos: -71912.2 209119 7183.01\l267971 288525 294582 298669 \lInputs:Output0->261099\l" ];
+288523 -> 93912535461872;
+
+298794 -> 93912535461872;
+
+93912535461872 [color="0 0.3 0.8", label="2 X Alternate: Coke Steel Ingot (200%)\lcircuit 0\l-  15  75.00   150.00 Petroleum Coke\l-  15  75.00   150.00 Iron Ore\l+  20 100.00   200.00 Steel Ingot\l\lPos: -70596.1 257780 3982.56\l288523 298794 \lInputs:" ];
+93912535736672 -> 278027;
+
+288523 -> 93912535736672;
+
+298794 -> 93912535736672;
+
+93912535736672 [color="0.230769 0.607692 0.830769", label="16 X Alternate: Coke Steel Ingot (1580%)\lcircuit 24\l-  15  75.00  1185.00 Petroleum Coke\l-  15  75.00  1185.00 Iron Ore\l+  20 100.00  1580.00 Steel Ingot\l\lPos: -70596.1 256780 3982.56\l288523 298794 \lInputs:Output2->278027\l" ];
+93912535867888 -> 289305;
+
+289507 -> 93912535867888;
+
+289869 -> 93912535867888;
+
+93912535867888 [color="0 0.3 0.8", label="1 X Alternate: Crystal Computer (100%)\lcircuit 0\l-   8   7.50     7.50 Circuit Board\l-   3   2.81     2.81 Crystal Oscillator\l+   3   2.81     2.81 Computer\l\lPos: -6244.53 245447 -1075.87\l289507 289869 \lInputs:Output0->289305\l" ];
+93912535894256 -> 288243;
+
+275939 -> 93912535894256;
+
+284639 -> 93912535894256;
+
+93912535894256 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Crystal Computer (3600%)\lcircuit 24\l-   8   7.50   270.00 Circuit Board\l-   3   2.81   101.25 Crystal Oscillator\l+   3   2.81   101.25 Computer\l\lPos: -92730.7 236639 5583\l275939 284639 \lInputs:Output0->288243\l" ];
+93912537100128 -> 287497;
+
+287307 -> 93912537100128;
+
+287327 -> 93912537100128;
+
+294841 -> 93912537100128;
+
+93912537100128 [color="0.230769 0.607692 0.830769", label="16 X Alternate: Cooling Device (1600%)\lcircuit 24\l-   1   1.88    30.00 Motor\l-   5   9.38   150.00 Heat Sink\l-  24  45.00   720.00 Nitrogen Gas\l+   2   3.75    60.00 Cooling System\l\lPos: -115796 217780 11982.5\l287307 287327 294841 \lInputs:Output1->287497\l" ];
+253397 -> 93912535467904;
+
+262924 -> 93912535467904;
+
+93912535467904 [color="0.115385 0.653846 0.915385", label="1 X Alternate: Copper Alloy Ingot (100%)\lcircuit 25\l-   5  25.00    25.00 Iron Ore\l-  10  50.00    50.00 Copper Ore\l+  20 100.00   100.00 Copper Ingot\l\lPos: -46805.1 236216 3983.04\l253397 262924 \lInputs:" ];
+93912535849168 -> 253347;
+
+253397 -> 93912535849168;
+
+253411 -> 93912535849168;
+
+93912535849168 [color="0.115385 0.653846 0.915385", label="7 X Alternate: Copper Alloy Ingot (700%)\lcircuit 25\l-   5  25.00   175.00 Iron Ore\l-  10  50.00   350.00 Copper Ore\l+  20 100.00   700.00 Copper Ingot\l\lPos: -38010.9 238984 3983.04\l253397 253411 \lInputs:Output2->253347\l" ];
+93912537063152 -> 253347;
+
+253397 -> 93912537063152;
+
+262924 -> 93912537063152;
+
+93912537063152 [color="0.115385 0.653846 0.915385", label="4 X Alternate: Copper Alloy Ingot (400%)\lcircuit 25\l-   5  25.00   100.00 Iron Ore\l-  10  50.00   200.00 Copper Ore\l+  20 100.00   400.00 Copper Ingot\l\lPos: -44073 235484 3983.04\l253397 262924 \lInputs:Output2->253347\l" ];
+93912117236848 -> 253383;
+
+253397 -> 93912117236848;
+
+253411 -> 93912117236848;
+
+93912117236848 [color="0.115385 0.653846 0.915385", label="7 X Alternate: Copper Alloy Ingot (700%)\lcircuit 25\l-   5  25.00   175.00 Iron Ore\l-  10  50.00   350.00 Copper Ore\l+  20 100.00   700.00 Copper Ingot\l\lPos: -39010.9 240716 3983.04\l253397 253411 \lInputs:Output2->253383\l" ];
+93912535844560 -> 253383;
+
+253397 -> 93912535844560;
+
+262924 -> 93912535844560;
+
+93912535844560 [color="0.115385 0.653846 0.915385", label="3 X Alternate: Copper Alloy Ingot (300%)\lcircuit 25\l-   5  25.00    75.00 Iron Ore\l-  10  50.00   150.00 Copper Ore\l+  20 100.00   300.00 Copper Ingot\l\lPos: -45073.1 237216 3983.04\l253397 262924 \lInputs:Output2->253383\l" ];
+253397 -> 93912535719920;
+
+262924 -> 93912535719920;
+
+93912535719920 [color="0.115385 0.653846 0.915385", label="24 X Alternate: Copper Alloy Ingot (2400%)\lcircuit 25\l-   5  25.00   600.00 Iron Ore\l-  10  50.00  1200.00 Copper Ore\l+  20 100.00  2400.00 Copper Ingot\l\lPos: -47537.1 233484 3983.04\l253397 262924 \lInputs:Output2->262991\l" ];
+93912535287808 -> 288443;
+
+279815 -> 93912535287808;
+
+283435 -> 93912535287808;
+
+93912535287808 [color="0.230769 0.607692 0.830769", label="32 X Alternate: Copper Rotor (3200%)\lcircuit 24\l-  52 195.00  6240.00 Screw\l-   6  22.50   720.00 Copper Sheet\l+   3  11.25   360.00 Rotor\l\lPos: -33481.7 244139 2383.04\l279815 283435 \lInputs:Output0->288443\l" ];
+93912535890800 -> 284639;
+
+274039 -> 93912535890800;
+
+283433 -> 93912535890800;
+
+294592 -> 93912535890800;
+
+93912535890800 [color="0.230769 0.607692 0.830769", label="54 X Alternate: Insulated Crystal Oscillator (5400%)\lcircuit 24\l-   7  13.12   708.75 Rubber\l-  10  18.75  1012.50 Quartz Crystal\l-   1   1.88   101.25 AI Limiter\l+   1   1.88   101.25 Crystal Oscillator\l\lPos: -106455 268778 7183.09\l274039 283433 294592 \lInputs:Output0->284639\l" ];
+93912535720592 -> 240628;
+
+240620 -> 93912535720592;
+
+296645 -> 93912535720592;
+
+93912535720592 [color="0.230769 0.607692 0.830769", label="28 X Alternate: Diluted Fuel (2800%)\lcircuit 24\l-   5  50.00  1400.00 Heavy Oil Residue\l-  10 100.00  2800.00 Water\l+  10 100.00  2800.00 Fuel\l\lPos: -137796 221880 11982.5\l240620 296645 \lInputs:PipeOutputFactory->240628\l" ];
+93912535297472 -> 288711;
+
+93912535297472 -> 240694;
+
+240636 -> 93912535297472;
+
+288523 -> 93912535297472;
+
+93912535297472 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Electrode - Aluminum Scrap (3116%)\lcircuit 24\l-   4  60.00  1869.60 Petroleum Coke\l-  12 180.00  5608.80 Alumina Solution\l+  20 300.00  9348.00 Aluminum Scrap\l+   7 105.00  3271.80 Water\l\lPos: -68196.1 166380 8782.48\l240636 288523 \lInputs:Output1->288711\lPipeOutputFactory->240694\l" ];
+93912537174992 -> 240979;
+
+289805 -> 93912537174992;
+
+289807 -> 93912537174992;
+
+93912537174992 [color="0 0.3 0.8", label="3 X Alternate: Electromagnetic Connection Rod (450%)\lcircuit 0\l-   1   4.00    18.00 High-Speed Connector\l-   2   8.00    36.00 Stator\l+   2   8.00    36.00 Electromagnetic Control Rod\l\lPos: -19221.5 231474 -1020.19\l289805 289807 \lInputs:Output0->240979\l" ];
+93912535850032 -> 240997;
+
+240979 -> 93912535850032;
+
+289583 -> 93912535850032;
+
+93912535850032 [color="0 0.3 0.8", label="3 X Alternate: Electromagnetic Connection Rod (90%)\lcircuit 0\l-   1   4.00     3.60 High-Speed Connector\l-   2   8.00     7.20 Stator\l+   2   8.00     7.20 Electromagnetic Control Rod\l\lPos: -24435.6 231525 -1321.6\l240979 289583 \lInputs:Output0->240997\l" ];
+93912535114208 -> 288913;
+
+288985 -> 93912535114208;
+
+290787 -> 93912535114208;
+
+93912535114208 [color="0 0.3 0.8", label="1 X Alternate: Electromagnetic Connection Rod (100%)\lcircuit 0\l-   1   4.00     4.00 High-Speed Connector\l-   2   8.00     8.00 Stator\l+   2   8.00     8.00 Electromagnetic Control Rod\l\lPos: -4923.73 274841 -1150.06\l288985 290787 \lInputs:Output0->288913\l" ];
+93912535280064 -> 288957;
+
+288937 -> 93912535280064;
+
+290787 -> 93912535280064;
+
+93912535280064 [color="0 0.3 0.8", label="1 X Alternate: Electromagnetic Connection Rod (100%)\lcircuit 0\l-   1   4.00     4.00 High-Speed Connector\l-   2   8.00     8.00 Stator\l+   2   8.00     8.00 Electromagnetic Control Rod\l\lPos: -7085.23 274808 -1295.21\l288937 290787 \lInputs:Output0->288957\l" ];
+93912537175376 -> 289507;
+
+289583 -> 93912537175376;
+
+289713 -> 93912537175376;
+
+93912537175376 [color="0 0.3 0.8", label="6 X Alternate: Electromagnetic Connection Rod (600%)\lcircuit 0\l-   1   4.00    24.00 High-Speed Connector\l-   2   8.00    48.00 Stator\l+   2   8.00    48.00 Electromagnetic Control Rod\l\lPos: 2176.84 257605 -740.618\l289583 289713 \lInputs:Output0->289507\l" ];
+289357 -> 93912537079888;
+
+289831 -> 93912537079888;
+
+93912537079888 [color="0 0.3 0.8", label="1 X Alternate: Electromagnetic Connection Rod (200%)\lcircuit 0\l-   1   4.00     8.00 High-Speed Connector\l-   2   8.00    16.00 Stator\l+   2   8.00    16.00 Electromagnetic Control Rod\l\lPos: 305.901 251110 -592.289\l289357 289831 \lInputs:Output0->289513\l" ];
+93912535907216 -> 289529;
+
+289603 -> 93912535907216;
+
+290787 -> 93912535907216;
+
+93912535907216 [color="0 0.3 0.8", label="3 X Alternate: Electromagnetic Connection Rod (300%)\lcircuit 0\l-   1   4.00    12.00 High-Speed Connector\l-   2   8.00    24.00 Stator\l+   2   8.00    24.00 Electromagnetic Control Rod\l\lPos: -1361.85 272908 -1252.09\l289603 290787 \lInputs:Output0->289529\l" ];
+289871 -> 93912535316480;
+
+290787 -> 93912535316480;
+
+93912535316480 [color="0 0.3 0.8", label="1 X Alternate: Electromagnetic Connection Rod (100%)\lcircuit 0\l-   1   4.00     4.00 High-Speed Connector\l-   2   8.00     8.00 Stator\l+   2   8.00     8.00 Electromagnetic Control Rod\l\lPos: -11553 260906 -3166.2\l289871 290787 \lInputs:Output0->289609\l" ];
+93912535448976 -> 289699;
+
+288849 -> 93912535448976;
+
+289507 -> 93912535448976;
+
+93912535448976 [color="0 0.3 0.8", label="1 X Alternate: Electromagnetic Connection Rod (100%)\lcircuit 0\l-   1   4.00     4.00 High-Speed Connector\l-   2   8.00     8.00 Stator\l+   2   8.00     8.00 Electromagnetic Control Rod\l\lPos: -523.637 248102 -327.926\l288849 289507 \lInputs:Output0->289699\l" ];
+93912535452400 -> 288849;
+
+288843 -> 93912535452400;
+
+289807 -> 93912535452400;
+
+93912535452400 [color="0.153846 0.638462 0.953846", label="3 X Alternate: Electromagnetic Connection Rod (300%)\lcircuit 16\l-   1   4.00    12.00 High-Speed Connector\l-   2   8.00    24.00 Stator\l+   2   8.00    24.00 Electromagnetic Control Rod\l\lPos: -4980.73 272583 -1236.38\l288843 289807 \lInputs:Output0->288849\l" ];
+93912535451696 -> 287063;
+
+290381 -> 93912535451696;
+
+290665 -> 93912535451696;
+
+93912535451696 [color="0.230769 0.607692 0.830769", label="32 X Alternate: Encased Industrial Pipe (3200%)\lcircuit 24\l-   5  20.00   640.00 Concrete\l-   7  28.00   896.00 Steel Pipe\l+   1   4.00   128.00 Encased Industrial Beam\l\lPos: -47004.8 210239 5583\l290381 290665 \lInputs:Output0->287063\l" ];
+93912535293408 -> 289831;
+
+93912535293408 [color="0 0.3 0.8", label="3 X Alternate: Compacted Coal (300%)\lcircuit 0\l-   5  25.00    75.00 Coal\l-   5  25.00    75.00 Sulfur\l+   5  25.00    75.00 Compacted Coal\l\lPos: 8996.2 286127 -297.614\l288875 288877 \lInputs:Output0->289831\l" ];
+93912535462592 -> 259097;
+
+298609 -> 93912535462592;
+
+298669 -> 93912535462592;
+
+93912535462592 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Compacted Coal (2400%)\lcircuit 24\l-   5  25.00   600.00 Coal\l-   5  25.00   600.00 Sulfur\l+   5  25.00   600.00 Compacted Coal\l\lPos: -90996.1 223080 2382.56\l298609 298669 \lInputs:Output0->259097\l" ];
+93912535721936 -> 288525;
+
+290401 -> 93912535721936;
+
+290405 -> 93912535721936;
+
+93912535721936 [color="0.230769 0.607692 0.830769", label="72 X Alternate: Fused Wire (6968.93%)\lcircuit 24\l-   4  12.00   836.27 Copper Ingot\l-   1   3.00   209.07 Caterium Ingot\l+  30  90.00  6272.04 Wire\l\lPos: -36197.5 263579 3983.09\l290401 290405 \lInputs:Output0->288525\l" ];
+93912535508272 -> 289849;
+
+289831 -> 93912535508272;
+
+93912535508272 [color="0 0.3 0.8", label="1 X Alternate: Fine Black Powder (100%)\lcircuit 0\l-   1   3.75     3.75 Compacted Coal\l-   2   7.50     7.50 Sulfur\l+   4  15.00    15.00 Black Powder\l\lPos: 10594.5 282843 100\l289831 \lInputs:Output0->289849\l" ];
+93912535722608 -> 289941;
+
+259097 -> 93912535722608;
+
+298669 -> 93912535722608;
+
+93912535722608 [color="0 0.3 0.8", label="5 X Alternate: Fine Black Powder (500%)\lcircuit 0\l-   1   3.75    18.75 Compacted Coal\l-   2   7.50    37.50 Sulfur\l+   4  15.00    75.00 Black Powder\l\lPos: -80606.5 229639 2383.02\l259097 298669 \lInputs:Output0->289941\l" ];
+93912537175792 -> 289941;
+
+259097 -> 93912537175792;
+
+298669 -> 93912537175792;
+
+93912537175792 [color="0.807692 0.376923 0.807692", label="4 X Alternate: Fine Black Powder (400%)\lcircuit 19\l-   1   3.75    15.00 Compacted Coal\l-   2   7.50    30.00 Sulfur\l+   4  15.00    60.00 Black Powder\l\lPos: -82338.5 230639 2383.02\l259097 298669 \lInputs:Output0->289941\l" ];
+93912535267872 -> 289941;
+
+259097 -> 93912535267872;
+
+298669 -> 93912535267872;
+
+93912535267872 [color="0.230769 0.607692 0.830769", label="3 X Alternate: Fine Black Powder (300%)\lcircuit 24\l-   1   3.75    11.25 Compacted Coal\l-   2   7.50    22.50 Sulfur\l+   4  15.00    45.00 Black Powder\l\lPos: -78874.4 228639 2383.02\l259097 298669 \lInputs:Output0->289941\l" ];
+93912535606224 -> 287495;
+
+240346 -> 93912535606224;
+
+240628 -> 93912535606224;
+
+287263 -> 93912535606224;
+
+288677 -> 93912535606224;
+
+93912535606224 [color="0.230769 0.607692 0.830769", label="8 X Alternate: Heat-Fused Frame (800%)\lcircuit 24\l-  10  30.00   240.00 Fuel\l-   1   3.00    24.00 Heavy Modular Frame\l-   8  24.00   192.00 Nitric Acid\l-  50 150.00  1200.00 Aluminum Ingot\l+   1   3.00    24.00 Fused Modular Frame\l\lPos: -103796 213880 11982.5\l240346 240628 287263 288677 \lInputs:Output1->287495\l" ];
+93912535295808 -> 294697;
+
+93912535295808 -> 240620;
+
+294817 -> 93912535295808;
+
+93912535295808 [color="0.230769 0.607692 0.830769", label="73 X Alternate: Heavy Oil Residue (7300%)\lcircuit 24\l-   3  30.00  2190.00 Crude Oil\l+   2  20.00  1460.00 Polymer Resin\l+   4  40.00  2920.00 Heavy Oil Residue\l\lPos: -116764 265411 11983\l294817 \lInputs:Output1->294697\lPipeOutputFactory->240620\l" ];
+93912535903760 -> 273191;
+
+275939 -> 93912535903760;
+
+283809 -> 93912535903760;
+
+285883 -> 93912535903760;
+
+93912535903760 [color="0.230769 0.607692 0.830769", label="28 X Alternate: Silicon High-Speed Connector (2800%)\lcircuit 24\l-  25  37.50  1050.00 Silica\l-   2   3.00    84.00 Circuit Board\l-  60  90.00  2520.00 Quickwire\l+   2   3.00    84.00 High-Speed Connector\l\lPos: -71796.1 258080 7182.56\l275939 283809 285883 \lInputs:Output0->273191\l" ];
+93912535111552 -> 289431;
+
+289129 -> 93912535111552;
+
+289533 -> 93912535111552;
+
+93912535111552 [color="0 0.3 0.8", label="5 X Alternate: Iron Alloy Ingot (500%)\lcircuit 0\l-   2  20.00   100.00 Iron Ore\l-   2  20.00   100.00 Copper Ore\l+   5  50.00   250.00 Iron Ingot\l\lPos: -8581.12 289274 -1052.09\l289129 289533 \lInputs:Output2->289431\l" ];
+93912535318144 -> 288291;
+
+298759 -> 93912535318144;
+
+298794 -> 93912535318144;
+
+93912535318144 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Iron Alloy Ingot (3117.6%)\lcircuit 24\l-   2  20.00   623.52 Iron Ore\l-   2  20.00   623.52 Copper Ore\l+   5  50.00  1558.80 Iron Ingot\l\lPos: -41459.6 225847 3982.99\l298759 298794 \lInputs:Output2->288291\l" ];
+93912537191648 -> 289431;
+
+289129 -> 93912537191648;
+
+289533 -> 93912537191648;
+
+93912537191648 [color="0.653846 0.438462 0.853846", label="3 X Alternate: Iron Alloy Ingot (300%)\lcircuit 29\l-   2  20.00    60.00 Iron Ore\l-   2  20.00    60.00 Copper Ore\l+   5  50.00   150.00 Iron Ingot\l\lPos: -9570.32 294033 -1057.73\l289129 289533 \lInputs:Output2->289431\l" ];
+93912537179328 -> 290789;
+
+289431 -> 93912537179328;
+
+93912537179328 [color="0 0.3 0.8", label="4 X Alternate: Solid Steel Ingot (400%)\lcircuit 0\l-   2  40.00   160.00 Iron Ingot\l-   2  40.00   160.00 Coal\l+   3  60.00   240.00 Steel Ingot\l\lPos: 3326.84 277111 -790.987\l289041 289431 \lInputs:Output2->290789\l" ];
+93912535301952 -> 278027;
+
+288291 -> 93912535301952;
+
+298609 -> 93912535301952;
+
+93912535301952 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Solid Steel Ingot (3600%)\lcircuit 24\l-   2  40.00  1440.00 Iron Ingot\l-   2  40.00  1440.00 Coal\l+   3  60.00  2160.00 Steel Ingot\l\lPos: -68596.1 248780 3982.56\l288291 298609 \lInputs:Output2->278027\l" ];
+93912535471584 -> 287263;
+
+276267 -> 93912535471584;
+
+287063 -> 93912535471584;
+
+290381 -> 93912535471584;
+
+290665 -> 93912535471584;
+
+93912535471584 [color="0.230769 0.607692 0.830769", label="12 X Alternate: Heavy Encased Frame (1200%)\lcircuit 24\l-  22  20.62   247.50 Concrete\l-  10   9.38   112.50 Encased Industrial Beam\l-  36  33.75   405.00 Steel Pipe\l-   8   7.50    90.00 Modular Frame\l+   3   2.81    33.75 Heavy Modular Frame\l\lPos: -47803 223815 7183.09\l276267 287063 290381 290665 \lInputs:Output0->287263\l" ];
+93912535605552 -> 287307;
+
+284639 -> 93912535605552;
+
+286329 -> 93912535605552;
+
+288443 -> 93912535605552;
+
+93912535605552 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Rigour Motor (2400%)\lcircuit 24\l-   3   3.75    90.00 Rotor\l-   1   1.25    30.00 Crystal Oscillator\l-   3   3.75    90.00 Stator\l+   6   7.50   180.00 Motor\l\lPos: -40419.5 207245 7183.1\l280469 284639 286329 288443 \lInputs:Output0->287307\l" ];
+93912535286304 [color="0.307692 0.576923 0.907692", label="6 X Alternate: Seismic Nobelisk (600%)\lcircuit 6\l-   8  12.00    72.00 Steel Pipe\l-   1   1.50     9.00 Crystal Oscillator\l-   8  12.00    72.00 Black Powder\l+   4   6.00    36.00 \l\lPos: -86082.4 220922 8783.01\l251449 251451 251453 252691 \lInputs:Output0->251461\l" ];
+284621 -> 93912535845424;
+
+284639 -> 93912535845424;
+
+289941 -> 93912535845424;
+
+93912535845424 [color="0.230769 0.607692 0.830769", label="1 X Alternate: Seismic Nobelisk (100%)\lcircuit 24\l-   8  12.00    12.00 Steel Pipe\l-   1   1.50     1.50 Crystal Oscillator\l-   8  12.00    12.00 Black Powder\l+   4   6.00     6.00 \l\lPos: -55340.2 210202 8783.1\l284621 284639 289941 \lInputs:Output0->284651\l" ];
+288957 -> 93912535737440;
+
+289529 -> 93912535737440;
+
+289603 -> 93912535737440;
+
+290787 -> 93912535737440;
+
+93912535737440 [color="0 0.3 0.8", label="1 X Alternate: Uranium Fuel Unit (25%)\lcircuit 0\l- 100  20.00     5.00 Encased Uranium Cell\l-   3   0.60     0.15 Crystal Oscillator\l-  10   2.00     0.50 Electromagnetic Control Rod\l-   6   1.20     0.30 Beacon\l+   3   0.60     0.15 Uranium Fuel Rod\l\lPos: -10078.7 270145 -1458.13\l288957 289529 289603 290787 \lInputs:Output0->288905\l" ];
+93912535315648 -> 289871;
+
+289849 -> 93912535315648;
+
+289869 -> 93912535315648;
+
+290787 -> 93912535315648;
+
+93912535315648 [color="0 0.3 0.8", label="1 X Alternate: Uranium Fuel Unit (100%)\lcircuit 0\l- 100  20.00    20.00 Encased Uranium Cell\l-   3   0.60     0.60 Crystal Oscillator\l-  10   2.00     2.00 Electromagnetic Control Rod\l-   6   1.20     1.20 Beacon\l+   3   0.60     0.60 Uranium Fuel Rod\l\lPos: -10559.1 264323 -3109.25\l289849 289869 290787 \lInputs:Output0->289871\l" ];
+93912535604880 -> 299683;
+
+271537 -> 93912535604880;
+
+273101 -> 93912535604880;
+
+284639 -> 93912535604880;
+
+284681 -> 93912535604880;
+
+93912535604880 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Uranium Fuel Unit (2400%)\lcircuit 24\l- 100  20.00   480.00 Encased Uranium Cell\l-   3   0.60    14.40 Crystal Oscillator\l-  10   2.00    48.00 Electromagnetic Control Rod\l-   6   1.20    28.80 Beacon\l+   3   0.60    14.40 Uranium Fuel Rod\l\lPos: 98586.6 92525.9 15083\l271537 273101 284639 284681 \lInputs:Output0->299683\l" ];
+93912535790432 -> 294582;
+
+240628 -> 93912535790432;
+
+294592 -> 93912535790432;
+
+93912535790432 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Recycled Plastic (3600%)\lcircuit 24\l-   6  30.00  1080.00 Rubber\l-   6  30.00  1080.00 Fuel\l+  12  60.00  2160.00 Plastic\l\lPos: -123193 259076 8783.02\l240628 294592 \lInputs:Output1->294582\l" ];
+93912535583632 -> 294742;
+
+240628 -> 93912535583632;
+
+294737 -> 93912535583632;
+
+93912535583632 [color="0.230769 0.607692 0.830769", label="1 X Alternate: Recycled Plastic (100%)\lcircuit 24\l-   6  30.00    30.00 Rubber\l-   6  30.00    30.00 Fuel\l+  12  60.00    60.00 Plastic\l\lPos: -93891.4 232228 11983\l240628 294737 \lInputs:Output1->294742\l" ];
+286063 -> 93912535478800;
+
+290755 -> 93912535478800;
+
+93912535478800 [color="0.230769 0.607692 0.830769", label="18 X Alternate: Plutonium Fuel Unit (2700%)\lcircuit 24\l-  20  10.00   270.00 Encased Plutonium Cell\l-   1   0.50    13.50 Pressure Conversion Cube\l+   1   0.50    13.50 Plutonium Fuel Rod\l\lPos: 110821 113330 15083\l286063 290755 \lInputs:Output0->286111\l" ];
+93912535290880 -> 289309;
+
+289718 -> 93912535290880;
+
+93912535290880 [color="0 0.3 0.8", label="1 X Alternate: Polyester Fabric (100%)\lcircuit 0\l-  16  80.00    80.00 Polymer Resin\l-  10  50.00    50.00 Water\l+   1   5.00     5.00 Fabric\l\lPos: -10056.9 248957 -1520.74\l289718 \lInputs:Output1->289309\l" ];
+93912535812256 -> 289357;
+
+289718 -> 93912535812256;
+
+93912535812256 [color="0 0.3 0.8", label="1 X Alternate: Polyester Fabric (100%)\lcircuit 0\l-  16  80.00    80.00 Polymer Resin\l-  10  50.00    50.00 Water\l+   1   5.00     5.00 Fabric\l\lPos: -4640.62 250401 -1265.2\l289718 \lInputs:Output1->289357\l" ];
+93912535282528 -> 289713;
+
+289718 -> 93912535282528;
+
+93912535282528 [color="0 0.3 0.8", label="3 X Alternate: Polyester Fabric (300%)\lcircuit 0\l-  16  80.00   240.00 Polymer Resin\l-  10  50.00   150.00 Water\l+   1   5.00    15.00 Fabric\l\lPos: -5977.59 250382 -1444.57\l289718 \lInputs:Output1->289713\l" ];
+93912535551456 -> 289713;
+
+93912535551456 [color="0 0.3 0.8", label="1 X Alternate: Polyester Fabric (100%)\lcircuit 0\l-  16  80.00    80.00 Polymer Resin\l-  10  50.00    50.00 Water\l+   1   5.00     5.00 Fabric\l\lPos: -4476.33 252588 -1392.88\l289720 \lInputs:Output1->289713\l" ];
+93912535121984 -> 289957;
+
+294697 -> 93912535121984;
+
+296645 -> 93912535121984;
+
+93912535121984 [color="0.230769 0.607692 0.830769", label="2 X Alternate: Polyester Fabric (200%)\lcircuit 24\l-  16  80.00   160.00 Polymer Resin\l-  10  50.00   100.00 Water\l+   1   5.00    10.00 Fabric\l\lPos: -74756.4 209172 11983.1\l294697 296645 \lInputs:Output1->289957\l" ];
+93912535797088 -> 280579;
+
+280489 -> 93912535797088;
+
+93912535797088 [color="0.230769 0.607692 0.830769", label="2 X Alternate: Pure Caterium Ingot (200%)\lcircuit 24\l-   2  24.00    48.00 Water\l-   2  24.00    48.00 Caterium Ore\l+   1  12.00    24.00 Caterium Ingot\l\lPos: -233096 206880 -17.4389\l280489 \lInputs:Output1->280579\l" ];
+93912535891664 -> 280579;
+
+280489 -> 93912535891664;
+
+298572 -> 93912535891664;
+
+93912535891664 [color="0.230769 0.607692 0.830769", label="5 X Alternate: Pure Caterium Ingot (500%)\lcircuit 24\l-   2  24.00   120.00 Water\l-   2  24.00   120.00 Caterium Ore\l+   1  12.00    60.00 Caterium Ingot\l\lPos: -230696 206880 -17.4389\l280489 298572 \lInputs:Output1->280579\l" ];
+93912535274784 -> 280579;
+
+298572 -> 93912535274784;
+
+93912535274784 [color="0.230769 0.607692 0.830769", label="1 X Alternate: Pure Caterium Ingot (100%)\lcircuit 24\l-   2  24.00    24.00 Water\l-   2  24.00    24.00 Caterium Ore\l+   1  12.00    12.00 Caterium Ingot\l\lPos: -225696 206880 -17.5176\l280491 298572 \lInputs:Output1->280579\l" ];
+93912535296640 -> 290405;
+
+298572 -> 93912535296640;
+
+298739 -> 93912535296640;
+
+93912535296640 [color="0.230769 0.607692 0.830769", label="120 X Alternate: Pure Caterium Ingot (12000%)\lcircuit 24\l-   2  24.00  2880.00 Water\l-   2  24.00  2880.00 Caterium Ore\l+   1  12.00  1440.00 Caterium Ingot\l\lPos: -224296 206880 -17.4389\l298572 298739 \lInputs:Output1->290405\l" ];
+93912535285440 -> 290401;
+
+298572 -> 93912535285440;
+
+298759 -> 93912535285440;
+
+93912535285440 [color="0.230769 0.607692 0.830769", label="162 X Alternate: Pure Copper Ingot (16200%)\lcircuit 24\l-   4  10.00  1620.00 Water\l-   6  15.00  2430.00 Copper Ore\l+  15  37.50  6075.00 Copper Ingot\l\lPos: -211496 214880 3182.56\l298572 298759 \lInputs:Output1->290401\l" ];
+290401 -> 93912535497392;
+
+290405 -> 93912535497392;
+
+93912535497392 [color="0.230769 0.607692 0.830769", label="2 X Alternate: Fused Quickwire (200%)\lcircuit 24\l-   5  37.50    75.00 Copper Ingot\l-   1   7.50    15.00 Caterium Ingot\l+  12  90.00   180.00 Quickwire\l\lPos: -55940.8 247960 5581.21\l290401 290405 \lInputs:" ];
+93912535465760 -> 283809;
+
+290401 -> 93912535465760;
+
+290405 -> 93912535465760;
+
+93912535465760 [color="0.230769 0.607692 0.830769", label="38 X Alternate: Fused Quickwire (3694.6%)\lcircuit 24\l-   5  37.50  1385.48 Copper Ingot\l-   1   7.50   277.10 Caterium Ingot\l+  12  90.00  3325.14 Quickwire\l\lPos: -53862.4 246760 5581.21\l290401 290405 \lInputs:Output0->283809\l" ];
+93912535721264 -> 285127;
+
+290401 -> 93912535721264;
+
+290405 -> 93912535721264;
+
+93912535721264 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Fused Quickwire (2000%)\lcircuit 24\l-   5  37.50   750.00 Copper Ingot\l-   1   7.50   150.00 Caterium Ingot\l+  12  90.00  1800.00 Quickwire\l\lPos: 55259.6 115565 15083\l290401 290405 \lInputs:Output0->285127\l" ];
+93912537095728 -> 285839;
+
+290401 -> 93912537095728;
+
+290405 -> 93912537095728;
+
+93912537095728 [color="0.230769 0.607692 0.830769", label="41 X Alternate: Fused Quickwire (4100%)\lcircuit 24\l-   5  37.50  1537.50 Copper Ingot\l-   1   7.50   307.50 Caterium Ingot\l+  12  90.00  3690.00 Quickwire\l\lPos: -68396.1 272580 5582.56\l290401 290405 \lInputs:Output0->285839\l" ];
+250167 -> 93912535864432;
+
+250169 -> 93912535864432;
+
+93912535864432 [color="0.769231 0.392308 0.969231", label="1 X Alternate: Fused Quickwire (96%)\lcircuit 28\l-   5  37.50    36.00 Copper Ingot\l-   1   7.50     7.20 Caterium Ingot\l+  12  90.00    86.40 Quickwire\l\lPos: -53362.4 247626 5583.26\l250167 250169 \lInputs:" ];
+93912537088752 -> 249385;
+
+250167 -> 93912537088752;
+
+250169 -> 93912537088752;
+
+93912537088752 [color="0.769231 0.392308 0.969231", label="7 X Alternate: Fused Quickwire (696%)\lcircuit 28\l-   5  37.50   261.00 Copper Ingot\l-   1   7.50    52.20 Caterium Ingot\l+  12  90.00   626.40 Quickwire\l\lPos: -52440.7 254023 5581.21\l250167 250169 \lInputs:Output0->249385\l" ];
+250167 -> 93912535302784;
+
+250169 -> 93912535302784;
+
+93912535302784 [color="0.769231 0.392308 0.969231", label="3 X Alternate: Fused Quickwire (288%)\lcircuit 28\l-   5  37.50   108.00 Copper Ingot\l-   1   7.50    21.60 Caterium Ingot\l+  12  90.00   259.20 Quickwire\l\lPos: -51862.3 250224 5581.21\l250167 250169 \lInputs:Output0->250181\l" ];
+93912535112608 -> 252999;
+
+250167 -> 93912535112608;
+
+250169 -> 93912535112608;
+
+93912535112608 [color="0.769231 0.392308 0.969231", label="3 X Alternate: Fused Quickwire (288%)\lcircuit 28\l-   5  37.50   108.00 Copper Ingot\l-   1   7.50    21.60 Caterium Ingot\l+  12  90.00   259.20 Quickwire\l\lPos: -50362.3 252823 5581.21\l250167 250169 \lInputs:Output0->252999\l" ];
+93912535520848 -> 268581;
+
+275939 -> 93912535520848;
+
+277163 -> 93912535520848;
+
+284639 -> 93912535520848;
+
+294592 -> 93912535520848;
+
+93912535520848 [color="0.230769 0.607692 0.830769", label="36 X Alternate: Radio Control System (3600%)\lcircuit 24\l-  30  45.00  1620.00 Rubber\l-  10  15.00   540.00 Circuit Board\l-  60  90.00  3240.00 Aluminum Casing\l-   1   1.50    54.00 Crystal Oscillator\l+   3   4.50   162.00 Radio Control Unit\l\lPos: -106236 198554 7183.04\l275939 277163 284639 294592 \lInputs:Output0->268581\l" ];
+93912535284064 -> 294592;
+
+240628 -> 93912535284064;
+
+294582 -> 93912535284064;
+
+93912535284064 [color="0.230769 0.607692 0.830769", label="60 X Alternate: Recycled Rubber (6000%)\lcircuit 24\l-   6  30.00  1800.00 Plastic\l-   6  30.00  1800.00 Fuel\l+  12  60.00  3600.00 Rubber\l\lPos: -112522 248759 11983\l240628 294582 \lInputs:Output1->294592\l" ];
+93912535897712 -> 294737;
+
+240628 -> 93912535897712;
+
+294742 -> 93912535897712;
+
+93912535897712 [color="0.230769 0.607692 0.830769", label="1 X Alternate: Recycled Rubber (100%)\lcircuit 24\l-   6  30.00    30.00 Plastic\l-   6  30.00    30.00 Fuel\l+  12  60.00    60.00 Rubber\l\lPos: -94757.5 232728 11983\l240628 294742 \lInputs:Output1->294737\l" ];
+93912535283200 -> 288937;
+
+288985 -> 93912535283200;
+
+289013 -> 93912535283200;
+
+93912535283200 [color="0 0.3 0.8", label="2 X Alternate: Stitched Iron Plate (200%)\lcircuit 0\l-  10  18.75    37.50 Iron Plate\l-  20  37.50    75.00 Wire\l+   3   5.62    11.25 Reinforced Iron Plate\l\lPos: -5262.68 278635 -1135.15\l288985 289013 \lInputs:Output0->288937\l" ];
+93912537133376 -> 290665;
+
+294592 -> 93912537133376;
+
+298654 -> 93912537133376;
+
+93912537133376 [color="0.230769 0.607692 0.830769", label="32 X Alternate: Rubber Concrete (3200%)\lcircuit 24\l-   2  10.00   320.00 Rubber\l-  10  50.00  1600.00 Limestone\l+   9  45.00  1440.00 Concrete\l\lPos: -94996.1 223080 5582.56\l294592 298654 \lInputs:Output0->290665\l" ];
+93912535540512 [color="0 0.3 0.8", label="3 X Alternate: Steel Screw (300%)\lcircuit 0\l-   1   5.00    15.00 Steel Beam\l+  52 260.00   780.00 Screw\l\lPos: -77654 210903 3983.09\l\lInputs:Output0->253213\l" ];
+93912535813408 -> 257751;
+
+275959 -> 93912535813408;
+
+93912535813408 [color="0 0.3 0.8", label="1 X Alternate: Steel Screw (100%)\lcircuit 0\l-   1   5.00     5.00 Steel Beam\l+  52 260.00   260.00 Screw\l\lPos: -78168.2 210290 3989.17\l275959 \lInputs:Output0->257751\l" ];
+93912535787696 -> 275967;
+
+275959 -> 93912535787696;
+
+93912535787696 [color="0 0.3 0.8", label="1 X Alternate: Steel Screw (100%)\lcircuit 0\l-   1   5.00     5.00 Steel Beam\l+  52 260.00   260.00 Screw\l\lPos: -79547.1 211447 3983.09\l275959 \lInputs:Output0->275967\l" ];
+93912535873216 -> 257751;
+
+275959 -> 93912535873216;
+
+93912535873216 [color="0.423077 0.530769 0.823077", label="2 X Alternate: Steel Screw (200%)\lcircuit 5\l-   1   5.00    10.00 Steel Beam\l+  52 260.00   520.00 Screw\l\lPos: -79196.7 209064 3983.09\l275959 \lInputs:Output0->257751\l" ];
+93912535837024 -> 275967;
+
+275959 -> 93912535837024;
+
+93912535837024 [color="0.423077 0.530769 0.823077", label="2 X Alternate: Steel Screw (200%)\lcircuit 5\l-   1   5.00    10.00 Steel Beam\l+  52 260.00   520.00 Screw\l\lPos: -80575.5 210221 3983.09\l275959 \lInputs:Output0->275967\l" ];
+279867 -> 93912535275648;
+
+93912535275648 [color="0.230769 0.607692 0.830769", label="3 X Alternate: Steel Screw (300%)\lcircuit 24\l-   1   5.00    15.00 Steel Beam\l+  52 260.00   780.00 Screw\l\lPos: -79032.9 212060 3983.09\l279867 \lInputs:Output0->256407\l" ];
+93912535208112 -> 279815;
+
+279867 -> 93912535208112;
+
+93912535208112 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Steel Screw (2400%)\lcircuit 24\l-   1   5.00   120.00 Steel Beam\l+  52 260.00  6240.00 Screw\l\lPos: -33990.6 241420 2382.96\l279867 \lInputs:Output0->279815\l" ];
+93912537080288 -> 240636;
+
+240694 -> 93912537080288;
+
+298805 -> 93912537080288;
+
+93912537080288 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Sloppy Alumina (1660.5%)\lcircuit 24\l-  10 200.00  3321.00 Water\l-  10 200.00  3321.00 Bauxite\l+  12 240.00  3985.20 Alumina Solution\l\lPos: -71396.1 166380 8782.48\l240694 298805 \lInputs:PipeOutputFactory->240636\l" ];
+93912537089104 -> 240636;
+
+296645 -> 93912537089104;
+
+298805 -> 93912537089104;
+
+93912537089104 [color="0.230769 0.607692 0.830769", label="12 X Alternate: Sloppy Alumina (696%)\lcircuit 24\l-  10 200.00  1392.00 Water\l-  10 200.00  1392.00 Bauxite\l+  12 240.00  1670.40 Alumina Solution\l\lPos: -71396.1 168780 8782.48\l296645 298805 \lInputs:PipeOutputFactory->240636\l" ];
+93912535263376 -> 289823;
+
+288849 -> 93912535263376;
+
+290787 -> 93912535263376;
+
+93912535263376 [color="0 0.3 0.8", label="1 X Alternate: Quickwire Stator (100%)\lcircuit 0\l-   4  16.00    16.00 Steel Pipe\l-  15  60.00    60.00 Quickwire\l+   2   8.00     8.00 Stator\l\lPos: -1845.49 268769 -1376.31\l288849 290787 \lInputs:Output0->289823\l" ];
+93912537060384 -> 283435;
+
+290401 -> 93912537060384;
+
+298572 -> 93912537060384;
+
+93912537060384 [color="0.230769 0.607692 0.830769", label="128 X Alternate: Steamed Copper Sheet (12800%)\lcircuit 24\l-   3  22.50  2880.00 Copper Ingot\l-   3  22.50  2880.00 Water\l+   3  22.50  2880.00 Copper Sheet\l\lPos: -168096 210880 3182.48\l290401 298572 \lInputs:Output1->283435\l" ];
+93912535783856 -> 287253;
+
+278027 -> 93912535783856;
+
+294582 -> 93912535783856;
+
+93912535783856 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Steel Coated Plate (2400%)\lcircuit 24\l-   2   5.00   120.00 Plastic\l-   3   7.50   180.00 Steel Ingot\l+  18  45.00  1080.00 Iron Plate\l\lPos: -89612.5 208960 5583.04\l278027 294582 \lInputs:Output0->287253\l" ];
+93912535735424 -> 284703;
+
+278027 -> 93912535735424;
+
+93912535735424 [color="0.230769 0.607692 0.830769", label="18 X Alternate: Steel Rod (1800%)\lcircuit 24\l-   1  12.00   216.00 Steel Ingot\l+   4  48.00   864.00 Iron Rod\l\lPos: -56892.2 208153 3983.09\l278027 \lInputs:Output0->284703\l" ];
+93912535725296 -> 240602;
+
+240620 -> 93912535725296;
+
+240628 -> 93912535725296;
+
+288523 -> 93912535725296;
+
+298669 -> 93912535725296;
+
+93912535725296 [color="0.230769 0.607692 0.830769", label="14 X Alternate: Turbo Blend Fuel (1400%)\lcircuit 24\l-   2  15.00   210.00 Fuel\l-   4  30.00   420.00 Heavy Oil Residue\l-   3  22.50   315.00 Petroleum Coke\l-   3  22.50   315.00 Sulfur\l+   6  45.00   630.00 Turbofuel\l\lPos: -111796 225980 11982.5\l240620 240628 288523 298669 \lInputs:PipeOutputFactory->240602\l" ];
+93912535544640 -> 287565;
+
+268581 -> 93912535544640;
+
+273101 -> 93912535544640;
+
+287307 -> 93912535544640;
+
+288443 -> 93912535544640;
+
+93912535544640 [color="0.230769 0.607692 0.830769", label="18 X Alternate: Turbo Electric Motor (1800%)\lcircuit 24\l-   7   6.56   118.12 Motor\l-   7   6.56   118.12 Rotor\l-   9   8.44   151.88 Radio Control Unit\l-   5   4.69    84.38 Electromagnetic Control Rod\l+   3   2.81    50.62 Turbo Motor\l\lPos: -53573.9 243958 7183.09\l268581 273101 287307 288443 \lInputs:Output0->287565\l" ];
+93912535288640 -> 271537;
+
+285127 -> 93912535288640;
+
+285883 -> 93912535288640;
+
+298774 -> 93912535288640;
+
+93912535288640 [color="0.230769 0.607692 0.830769", label="24 X Alternate: Infused Uranium Cell (2400%)\lcircuit 24\l-   3  15.00   360.00 Silica\l-  15  75.00  1800.00 Quickwire\l-   5  25.00   600.00 Uranium\l-   5  25.00   600.00 Sulfur\l+   4  20.00   480.00 Encased Uranium Cell\l\lPos: 95501.3 88848.8 15083\l285127 285883 289877 298774 \lInputs:Output0->271537\l" ];
+93912535119584 -> 288985;
+
+289431 -> 93912535119584;
+
+93912535119584 [color="0 0.3 0.8", label="4 X Alternate: Iron Wire (400%)\lcircuit 0\l-   5  12.50    50.00 Iron Ingot\l+   9  22.50    90.00 Wire\l\lPos: -2325.41 281645 -1135.16\l289431 \lInputs:Output0->288985\l" ];
+93912535309760 -> 277163;
+
+288677 -> 93912535309760;
+
+93912535309760 [color="0.230769 0.607692 0.830769", label="36 X Aluminum Casing (3600%)\lcircuit 24\l-   3  90.00  3240.00 Aluminum Ingot\l+   2  60.00  2160.00 Aluminum Casing\l\lPos: -63096.1 194680 10382.5\l288677 \lInputs:Output0->277163\l" ];
+93912535014512 -> 267971;
+
+288677 -> 93912535014512;
+
+93912535014512 [color="0.230769 0.607692 0.830769", label="1 X Alclad Aluminum Sheet (100%)\lcircuit 24\l-   1  10.00    10.00 Copper Ingot\l-   3  30.00    30.00 Aluminum Ingot\l+   3  30.00    30.00 Alclad Aluminum Sheet\l\lPos: -82762.7 196705 5583.1\l288677 \lInputs:Output0->267971\l" ];
+93912535458656 -> 267971;
+
+288677 -> 93912535458656;
+
+290401 -> 93912535458656;
+
+93912535458656 [color="0.230769 0.607692 0.830769", label="40 X Alclad Aluminum Sheet (4000%)\lcircuit 24\l-   1  10.00   400.00 Copper Ingot\l-   3  30.00  1200.00 Aluminum Ingot\l+   3  30.00  1200.00 Alclad Aluminum Sheet\l\lPos: -83762.7 194973 5583.1\l288677 290401 \lInputs:Output0->267971\l" ];
+241071 -> 93912537092432;
+
+288915 -> 93912537092432;
+
+289699 -> 93912537092432;
+
+289823 -> 93912537092432;
+
+93912537092432 [color="0 0.3 0.8", label="1 X Beacon (100%)\lcircuit 0\l-   3  22.50    22.50 Iron Plate\l-   1   7.50     7.50 Iron Rod\l-  15 112.50   112.50 Wire\l-   2  15.00    15.00 Cable\l+   1   7.50     7.50 Beacon\l\lPos: -31081.5 238959 -2025\l241071 288915 289699 289823 \lInputs:Output0->240865\l" ];
+93912537078784 -> 241071;
+
+240997 -> 93912537078784;
+
+289237 -> 93912537078784;
+
+289323 -> 93912537078784;
+
+93912537078784 [color="0 0.3 0.8", label="1 X Beacon (50%)\lcircuit 0\l-   3  22.50    11.25 Iron Plate\l-   1   7.50     3.75 Iron Rod\l-  15 112.50    56.25 Wire\l-   2  15.00     7.50 Cable\l+   1   7.50     3.75 Beacon\l\lPos: -27662.1 236145 -1780.08\l240997 289237 289323 \lInputs:Output0->241071\l" ];
+93912537176816 -> 289297;
+
+288849 -> 93912537176816;
+
+289713 -> 93912537176816;
+
+289927 -> 93912537176816;
+
+93912537176816 [color="0 0.3 0.8", label="1 X Beacon (100%)\lcircuit 0\l-   3  22.50    22.50 Iron Plate\l-   1   7.50     7.50 Iron Rod\l-  15 112.50   112.50 Wire\l-   2  15.00    15.00 Cable\l+   1   7.50     7.50 Beacon\l\lPos: -7981.61 243227 -948.022\l288849 289713 289927 \lInputs:Output0->289297\l" ];
+93912535268864 -> 289869;
+
+289237 -> 93912535268864;
+
+289699 -> 93912535268864;
+
+289713 -> 93912535268864;
+
+93912535268864 [color="0 0.3 0.8", label="1 X Beacon (100%)\lcircuit 0\l-   3  22.50    22.50 Iron Plate\l-   1   7.50     7.50 Iron Rod\l-  15 112.50   112.50 Wire\l-   2  15.00    15.00 Cable\l+   1   7.50     7.50 Beacon\l\lPos: -3133.46 243725 -458.445\l289237 289699 289713 \lInputs:Output0->289869\l" ];
+93912535892528 -> 284681;
+
+284699 -> 93912535892528;
+
+284703 -> 93912535892528;
+
+287253 -> 93912535892528;
+
+288525 -> 93912535892528;
+
+93912535892528 [color="0.230769 0.607692 0.830769", label="6 X Beacon (600%)\lcircuit 24\l-   3  22.50   135.00 Iron Plate\l-   1   7.50    45.00 Iron Rod\l-  15 112.50   675.00 Wire\l-   2  15.00    90.00 Cable\l+   1   7.50    45.00 Beacon\l\lPos: -46504.8 211105 8783.1\l284699 284703 287253 288525 \lInputs:Output0->284681\l" ];
+93912537182912 -> 289323;
+
+289297 -> 93912537182912;
+
+289305 -> 93912537182912;
+
+289309 -> 93912537182912;
+
+289699 -> 93912537182912;
+
+93912537182912 [color="0.538462 0.484615 0.938462", label="1 X Beacon (50%)\lcircuit 30\l-   3  22.50    11.25 Iron Plate\l-   1   7.50     3.75 Iron Rod\l-  15 112.50    56.25 Wire\l-   2  15.00     7.50 Cable\l+   1   7.50     3.75 Beacon\l\lPos: -10949.4 244403 -763.49\l289297 289305 289309 289699 \lInputs:Output0->289323\l" ];
+288985 -> 93912535724624;
+
+93912535724624 [color="0 0.3 0.8", label="1 X Cable (100%)\lcircuit 0\l-   2  60.00    60.00 Wire\l+   1  30.00    30.00 Cable\l\lPos: -4465.84 277345 -1135.93\l288985 \lInputs:Output0->289201\l" ];
+93912535566480 [color="0.846154 0.361538 0.846154", label="24 X Cable (2400%)\lcircuit 10\l-   2  60.00  1440.00 Wire\l+   1  30.00   720.00 Cable\l\lPos: -48567.5 219104 3983.09\l260955 \lInputs:Output0->262155\l" ];
+284621 -> 93912535681488;
+
+284681 -> 93912535681488;
+
+289941 -> 93912535681488;
+
+294592 -> 93912535681488;
+
+93912535681488 [color="0.230769 0.607692 0.830769", label="1 X Rifle Cartridge (100%)\lcircuit 24\l-  10  30.00    30.00 Rubber\l-  10  30.00    30.00 Steel Pipe\l-  10  30.00    30.00 Black Powder\l-   1   3.00     3.00 Beacon\l+   5  15.00    15.00 \l\lPos: -56899 211102 8783.02\l284621 284681 289941 294592 \lInputs:Output0->284619\l" ];
+93912535788464 -> 271775;
+
+273191 -> 93912535788464;
+
+283433 -> 93912535788464;
+
+288243 -> 93912535788464;
+
+294582 -> 93912535788464;
+
+93912535788464 [color="0.230769 0.607692 0.830769", label="18 X Supercomputer (1800%)\lcircuit 24\l-  28  52.50   945.00 Plastic\l-   2   3.75    67.50 Computer\l-   3   5.62   101.25 High-Speed Connector\l-   2   3.75    67.50 AI Limiter\l+   1   1.88    33.75 Supercomputer\l\lPos: -96058.3 228495 7183.09\l273191 283433 288243 294582 \lInputs:Output0->271775\l" ];
+93912535264416 -> 289603;
+
+298588 -> 93912535264416;
+
+93912535264416 [color="0 0.3 0.8", label="6 X Concrete (600%)\lcircuit 0\l-   3  45.00   270.00 Limestone\l+   1  15.00    90.00 Concrete\l\lPos: -12076.3 287931 -1033.1\l298588 \lInputs:Output0->289603\l" ];
+93912535264992 [color="0.0769231 0.669231 0.876923", label="24 X Copper Powder (1560%)\lcircuit 8\l-  30 300.00  4680.00 Copper Ingot\l+   5  50.00   780.00 Copper Powder\l\lPos: -70496.1 200780 3980.68\l262675 \lInputs:Output0->260525\l" ];
+93912537179888 -> 288325;
+
+290401 -> 93912537179888;
+
+93912537179888 [color="0.230769 0.607692 0.830769", label="18 X Copper Powder (1559.88%)\lcircuit 24\l-  30 300.00  4679.64 Copper Ingot\l+   5  50.00   779.94 Copper Powder\l\lPos: -122296 219480 3982.48\l290401 \lInputs:Output0->288325\l" ];
+93912535895984 -> 273101;
+
+283433 -> 93912535895984;
+
+286329 -> 93912535895984;
+
+93912535895984 [color="0.230769 0.607692 0.830769", label="36 X Electromagnetic Control Rod (3600%)\lcircuit 24\l-   3   6.00   216.00 Stator\l-   2   4.00   144.00 AI Limiter\l+   2   4.00   144.00 Electromagnetic Control Rod\l\lPos: -42196.1 220630 2382.56\l283433 286329 \lInputs:Output0->273101\l" ];
+93912535902896 -> 288541;
+
+289957 -> 93912535902896;
+
+294592 -> 93912535902896;
+
+298609 -> 93912535902896;
+
+93912535902896 [color="0.230769 0.607692 0.830769", label="1 X Gas Filter (100%)\lcircuit 24\l-   2  15.00    15.00 Rubber\l-   2  15.00    15.00 Fabric\l-   5  37.50    37.50 Coal\l+   1   7.50     7.50 Gas Filter\l\lPos: -58457.9 212002 8783.02\l289957 294592 298609 \lInputs:Output0->288541\l" ];
+277163 -> 93912535473312;
+
+283809 -> 93912535473312;
+
+288541 -> 93912535473312;
+
+93912535473312 [color="0.230769 0.607692 0.830769", label="1 X Iodine Infused Filter (100%)\lcircuit 24\l-   1   3.75     3.75 Gas Filter\l-   1   3.75     3.75 Aluminum Casing\l-   8  30.00    30.00 Quickwire\l+   1   3.75     3.75 Iodine Infused Filter\l\lPos: -54299 215605 8783.1\l277163 283809 288541 \lInputs:Output0->284747\l" ];
+93912535809952 -> 289237;
+
+289827 -> 93912535809952;
+
+93912535809952 [color="0 0.3 0.8", label="6 X Empty Canister (600%)\lcircuit 0\l-   2  30.00   180.00 Plastic\l+   4  60.00   360.00 Empty Canister\l\lPos: -3512.52 237976 -437.553\l289827 \lInputs:Output0->289237\l" ];
+93912535723280 -> 289583;
+
+289431 -> 93912535723280;
+
+93912535723280 [color="0 0.3 0.8", label="6 X Empty Canister (600%)\lcircuit 0\l-   2  30.00   180.00 Plastic\l+   4  60.00   360.00 Empty Canister\l\lPos: -1835.22 281092 -123.732\l289431 \lInputs:Output0->289583\l" ];
+93912537176176 -> 289927;
+
+289827 -> 93912537176176;
+
+93912537176176 [color="0 0.3 0.8", label="12 X Empty Canister (1200%)\lcircuit 0\l-   2  30.00   360.00 Plastic\l+   4  60.00   720.00 Empty Canister\l\lPos: -10527.8 239239 -237.416\l289827 \lInputs:Output0->289927\l" ];
+93912535867024 -> 290787;
+
+290789 -> 93912535867024;
+
+93912535867024 [color="0 0.3 0.8", label="4 X Empty Canister (400%)\lcircuit 0\l-   2  30.00   120.00 Plastic\l+   4  60.00   240.00 Empty Canister\l\lPos: 1030.33 274451 -1062.75\l290789 \lInputs:Output0->290787\l" ];
+93912535025328 -> 290787;
+
+290789 -> 93912535025328;
+
+93912535025328 [color="0.576923 0.469231 0.976923", label="1 X Empty Canister (100%)\lcircuit 21\l-   2  30.00    30.00 Plastic\l+   4  60.00    60.00 Empty Canister\l\lPos: -2277.12 278576 -1135.15\l290789 \lInputs:Output0->290787\l" ];
+93912535184944 -> 242127;
+
+294582 -> 93912535184944;
+
+93912535184944 [color="0.230769 0.607692 0.830769", label="1 X Empty Canister (100%)\lcircuit 24\l-   2  30.00    30.00 Plastic\l+   4  60.00    60.00 Empty Canister\l\lPos: -83596.1 225780 11982.5\l294582 \lInputs:Output0->242127\l" ];
+294582 -> 93912535537728;
+
+93912535537728 [color="0.230769 0.607692 0.830769", label="1 X Empty Canister (100%)\lcircuit 24\l-   2  30.00    30.00 Plastic\l+   4  60.00    60.00 Empty Canister\l\lPos: -79543.4 215120 3982.96\l294582 \lInputs:Output0->257371\l" ];
+93912535113200 -> 290787;
+
+290789 -> 93912535113200;
+
+93912535113200 [color="0.0769231 0.669231 0.876923", label="2 X Empty Canister (200%)\lcircuit 34\l-   2  30.00    60.00 Plastic\l+   4  60.00   120.00 Empty Canister\l\lPos: -672.327 277258 -1061.47\l290789 \lInputs:Output0->290787\l" ];
+240628 -> 93912535266432;
+
+242127 -> 93912535266432;
+
+93912535266432 [color="0.230769 0.607692 0.830769", label="1 X Packaged Fuel (100%)\lcircuit 24\l-   2  40.00    40.00 Fuel\l-   2  40.00    40.00 Empty Canister\l+   2  40.00    40.00 Packaged Fuel\l\lPos: -84396.1 225680 11982.5\l240628 242127 \lInputs:Output1->277883\l" ];
+93912535569536 -> 287327;
+
+267971 -> 93912535569536;
+
+283435 -> 93912535569536;
+
+93912535569536 [color="0.230769 0.607692 0.830769", label="36 X Heat Sink (3600%)\lcircuit 24\l-   5  37.50  1350.00 Alclad Aluminum Sheet\l-   3  22.50   810.00 Copper Sheet\l+   1   7.50   270.00 Heat Sink\l\lPos: -68396.1 194480 5582.56\l267971 283435 \lInputs:Output0->287327\l" ];
+93912535310592 -> 289805;
+
+289927 -> 93912535310592;
+
+93912535310592 [color="0 0.3 0.8", label="6 X Aluminum Ingot (600%)\lcircuit 0\l-   5  75.00   450.00 Silica\l-   6  90.00   540.00 Aluminum Scrap\l+   4  60.00   360.00 Aluminum Ingot\l\lPos: -13965.4 230224 -237.626\l289733 289927 \lInputs:Output2->289805\l" ];
+93912535461104 -> 288843;
+
+93912535461104 [color="0 0.3 0.8", label="1 X Caterium Ingot (150%)\lcircuit 0\l-   3  45.00    67.50 Caterium Ore\l+   1  15.00    22.50 Caterium Ingot\l\lPos: -12428.2 278675 -2039.34\l288815 \lInputs:Output2->288843\l" ];
+93912535454736 -> 255377;
+
+93912535454736 [color="0.461538 0.515385 0.861538", label="2 X Caterium Ingot (200%)\lcircuit 22\l-   3  45.00    90.00 Caterium Ore\l+   1  15.00    30.00 Caterium Ingot\l\lPos: -77766.7 241701 3983.09\l\lInputs:Output2->255377\l" ];
+93912537083072 -> 255377;
+
+255301 -> 93912537083072;
+
+93912537083072 [color="0.461538 0.515385 0.861538", label="16 X Caterium Ingot (1600%)\lcircuit 22\l-   3  45.00   720.00 Caterium Ore\l+   1  15.00   240.00 Caterium Ingot\l\lPos: -77561.5 241137 3983.01\l255301 \lInputs:Output2->255377\l" ];
+93912535284736 -> 255377;
+
+258385 -> 93912535284736;
+
+93912535284736 [color="0.461538 0.515385 0.861538", label="9 X Caterium Ingot (900%)\lcircuit 22\l-   3  45.00   405.00 Caterium Ore\l+   1  15.00   135.00 Caterium Ingot\l\lPos: -79613.6 246775 3983.09\l258385 \lInputs:Output2->255377\l" ];
+93912535308096 -> 255393;
+
+255301 -> 93912535308096;
+
+93912535308096 [color="0.461538 0.515385 0.861538", label="18 X Caterium Ingot (1800%)\lcircuit 22\l-   3  45.00   810.00 Caterium Ore\l+   1  15.00   270.00 Caterium Ingot\l\lPos: -76075.2 242317 3983.01\l255301 \lInputs:Output2->255393\l" ];
+93912535289312 -> 255393;
+
+258385 -> 93912535289312;
+
+93912535289312 [color="0.461538 0.515385 0.861538", label="9 X Caterium Ingot (900%)\lcircuit 22\l-   3  45.00   405.00 Caterium Ore\l+   1  15.00   135.00 Caterium Ingot\l\lPos: -77922.1 247391 3983.09\l258385 \lInputs:Output2->255393\l" ];
+93912535866160 -> 289807;
+
+289533 -> 93912535866160;
+
+93912535866160 [color="0 0.3 0.8", label="3 X Copper Ingot (300%)\lcircuit 0\l-   1  30.00    90.00 Copper Ore\l+   1  30.00    90.00 Copper Ingot\l\lPos: -12938.1 276982 -2049.39\l289533 \lInputs:Output2->289807\l" ];
+93912535860976 -> 289013;
+
+289431 -> 93912535860976;
+
+93912535860976 [color="0 0.3 0.8", label="2 X Iron Plate (200%)\lcircuit 0\l-   3  30.00    60.00 Iron Ingot\l+   2  20.00    40.00 Iron Plate\l\lPos: -7657.38 282052 -1135.15\l289431 \lInputs:Output0->289013\l" ];
+250925 -> 93912537183664;
+
+93912537183664 [color="0.269231 0.592308 0.869231", label="9 X Iron Plate (900%)\lcircuit 15\l-   3  30.00   270.00 Iron Ingot\l+   2  20.00   180.00 Iron Plate\l\lPos: -52955.2 213212 3981.21\l250925 \lInputs:Output0->250929\l" ];
+250925 -> 93912535508944;
+
+93912535508944 [color="0.269231 0.592308 0.869231", label="9 X Iron Plate (900%)\lcircuit 15\l-   3  30.00   270.00 Iron Ingot\l+   2  20.00   180.00 Iron Plate\l\lPos: -53763.8 211832 3983.02\l250925 \lInputs:Output0->263875\l" ];
+289431 -> 93912535723952;
+
+93912535723952 [color="0 0.3 0.8", label="1 X Iron Rod (100%)\lcircuit 0\l-   1  15.00    15.00 Iron Ingot\l+   1  15.00    15.00 Iron Rod\l\lPos: -6110.28 280893 -1135.16\l289431 \lInputs:Output0->288917\l" ];
+93912537098000 -> 276267;
+
+284703 -> 93912537098000;
+
+289885 -> 93912537098000;
+
+93912537098000 [color="0.230769 0.607692 0.830769", label="68 X Modular Frame (6800%)\lcircuit 24\l-  12  12.00   816.00 Iron Rod\l-   3   3.00   204.00 Reinforced Iron Plate\l+   2   2.00   136.00 Modular Frame\l\lPos: -48940.3 183714 5583.04\l284703 289885 \lInputs:Output0->276267\l" ];
+93912535298304 -> 288915;
+
+288913 -> 93912535298304;
+
+289823 -> 93912535298304;
+
+93912535298304 [color="0 0.3 0.8", label="1 X Motor (100%)\lcircuit 0\l-   2  10.00    10.00 Rotor\l-   2  10.00    10.00 Stator\l+   1   5.00     5.00 Motor\l\lPos: -1210.31 266731 -1553.42\l288913 289823 \lInputs:Output0->288915\l" ];
+93912535457488 -> 240242;
+
+287253 -> 93912535457488;
+
+294841 -> 93912535457488;
+
+299045 -> 93912535457488;
+
+93912535457488 [color="0.230769 0.607692 0.830769", label="11 X Nitric Acid (1100%)\lcircuit 24\l-   1  10.00   110.00 Iron Plate\l-   3  30.00   330.00 Water\l-  12 120.00  1320.00 Nitrogen Gas\l+   3  30.00   330.00 Nitric Acid\l\lPos: 85067.1 115618 15083\l287253 294841 299045 \lInputs:PipeOutputFactory->240242\l" ];
+93912535570208 -> 240346;
+
+287253 -> 93912535570208;
+
+294841 -> 93912535570208;
+
+296645 -> 93912535570208;
+
+93912535570208 [color="0.230769 0.607692 0.830769", label="6 X Nitric Acid (600%)\lcircuit 24\l-   1  10.00    60.00 Iron Plate\l-   3  30.00   180.00 Water\l-  12 120.00   720.00 Nitrogen Gas\l+   3  30.00   180.00 Nitric Acid\l\lPos: -101796 210780 11982.5\l287253 294841 296645 \lInputs:PipeOutputFactory->240346\l" ];
+93912535014032 -> 290681;
+
+93912535014032 -> 299045;
+
+240242 -> 93912535014032;
+
+240578 -> 93912535014032;
+
+285883 -> 93912535014032;
+
+299684 -> 93912535014032;
+
+93912535014032 [color="0.230769 0.607692 0.830769", label="24 X Non-fissile Uranium (2200%)\lcircuit 24\l-  15  37.50   825.00 Uranium Waste\l-  10  25.00   550.00 Silica\l-   6  15.00   330.00 Sulfuric Acid\l-   6  15.00   330.00 Nitric Acid\l+  20  50.00  1100.00 Non-fissile Uranium\l+   6  15.00   330.00 Water\l\lPos: 107556 101971 15083\l240242 240578 285883 299684 \lInputs:Output1->290681\lPipeOutputFactory->299045\l" ];
+93912535798240 -> 288523;
+
+240620 -> 93912535798240;
+
+93912535798240 [color="0.230769 0.607692 0.830769", label="30 X Petroleum Coke (3000%)\lcircuit 24\l-   4  40.00  1200.00 Heavy Oil Residue\l+  12 120.00  3600.00 Petroleum Coke\l\lPos: -114657 259460 8783.02\l240620 \lInputs:Output1->288523\l" ];
+93912535472448 -> 290755;
+
+290665 -> 93912535472448;
+
+290733 -> 93912535472448;
+
+93912535472448 [color="0.230769 0.607692 0.830769", label="72 X Encased Plutonium Cell (7200%)\lcircuit 24\l-   4  20.00  1440.00 Concrete\l-   2  10.00   720.00 Plutonium Pellet\l+   1   5.00   360.00 Encased Plutonium Cell\l\lPos: 109683 110107 15083\l290665 290733 \lInputs:Output0->290755\l" ];
+93912537180736 -> 290733;
+
+290681 -> 93912537180736;
+
+299684 -> 93912537180736;
+
+93912537180736 [color="0.0384615 0.684615 0.838462", label="24 X Plutonium Pellet (1100%)\lcircuit 17\l-  25  25.00   275.00 Uranium Waste\l- 100 100.00  1100.00 Non-fissile Uranium\l+  30  30.00   330.00 Plutonium Pellet\l\lPos: 109052 105154 18383\l290681 299684 \lInputs:Output0->290733\l" ];
+93912535026288 -> 267657;
+
+267645 -> 93912535026288;
+
+267651 -> 93912535026288;
+
+93912535026288 [color="0 0.3 0.8", label="2 X Pressure Conversion Cube (200%)\lcircuit 0\l-   2   2.00     4.00 Radio Control Unit\l-   1   1.00     2.00 Fused Modular Frame\l+   1   1.00     2.00 Pressure Conversion Cube\l\lPos: -84069.9 212160 2383.04\l267645 267651 \lInputs:Output0->267657\l" ];
+93912535456112 -> 267663;
+
+267645 -> 93912535456112;
+
+267651 -> 93912535456112;
+
+93912535456112 [color="0 0.3 0.8", label="2 X Pressure Conversion Cube (200%)\lcircuit 0\l-   2   2.00     4.00 Radio Control Unit\l-   1   1.00     2.00 Fused Modular Frame\l+   1   1.00     2.00 Pressure Conversion Cube\l\lPos: -85269.9 214239 2383.04\l267645 267651 \lInputs:Output0->267663\l" ];
+93912535294272 -> 267657;
+
+267645 -> 93912535294272;
+
+267651 -> 93912535294272;
+
+93912535294272 [color="0.346154 0.561538 0.946154", label="1 X Pressure Conversion Cube (100%)\lcircuit 23\l-   2   2.00     2.00 Radio Control Unit\l-   1   1.00     1.00 Fused Modular Frame\l+   1   1.00     1.00 Pressure Conversion Cube\l\lPos: -84936 211660 2383.04\l267645 267651 \lInputs:Output0->267657\l" ];
+93912535893392 -> 267663;
+
+267645 -> 93912535893392;
+
+267651 -> 93912535893392;
+
+93912535893392 [color="0.346154 0.561538 0.946154", label="1 X Pressure Conversion Cube (100%)\lcircuit 23\l-   2   2.00     2.00 Radio Control Unit\l-   1   1.00     1.00 Fused Modular Frame\l+   1   1.00     1.00 Pressure Conversion Cube\l\lPos: -86136 213739 2383.04\l267645 267651 \lInputs:Output0->267663\l" ];
+93912535455424 -> 286063;
+
+268581 -> 93912535455424;
+
+287495 -> 93912535455424;
+
+93912535455424 [color="0.230769 0.607692 0.830769", label="12 X Pressure Conversion Cube (1200%)\lcircuit 24\l-   2   2.00    24.00 Radio Control Unit\l-   1   1.00    12.00 Fused Modular Frame\l+   1   1.00    12.00 Pressure Conversion Cube\l\lPos: -82337.9 213160 2382.96\l268581 287495 \lInputs:Output0->286063\l" ];
+93912537090416 -> 288677;
+
+288711 -> 93912537090416;
+
+93912537090416 [color="0.230769 0.607692 0.830769", label="192 X Alternate: Pure Aluminum Ingot (15621.9%)\lcircuit 24\l-   2  60.00  9373.16 Aluminum Scrap\l+   1  30.00  4686.58 Aluminum Ingot\l\lPos: -61796.1 166980 8782.46\l288711 \lInputs:Output2->288677\l" ];
+93912537178224 -> 274039;
+
+298724 -> 93912537178224;
+
+93912537178224 [color="0.230769 0.607692 0.830769", label="54 X Quartz Crystal (5400%)\lcircuit 24\l-   5  37.50  2025.00 Raw Quartz\l+   3  22.50  1215.00 Quartz Crystal\l\lPos: -89995.2 247605 3983.09\l298724 \lInputs:Output0->274039\l" ];
+93912535904624 [color="0.5 0.5 0.9", label="54 X Quickwire (5400%)\lcircuit 13\l-   1  12.00   648.00 Caterium Ingot\l+   5  60.00  3240.00 Quickwire\l\lPos: -59229.3 190770 3983.09\l256295 \lInputs:Output0->271753\l" ];
+93912535265856 -> 249385;
+
+252991 -> 93912535265856;
+
+93912535265856 [color="0.769231 0.392308 0.969231", label="3 X Quickwire (300%)\lcircuit 28\l-   1  12.00    36.00 Caterium Ingot\l+   5  60.00   180.00 Quickwire\l\lPos: -50930.9 256038 5583.1\l252991 \lInputs:Output0->249385\l" ];
+93912535501952 -> 252999;
+
+252991 -> 93912535501952;
+
+93912535501952 [color="0.769231 0.392308 0.969231", label="3 X Quickwire (300%)\lcircuit 28\l-   1  12.00    36.00 Caterium Ingot\l+   5  60.00   180.00 Quickwire\l\lPos: -49372.1 255138 5583.1\l252991 \lInputs:Output0->252999\l" ];
+93912537184608 -> 294592;
+
+294697 -> 93912537184608;
+
+298572 -> 93912537184608;
+
+93912537184608 [color="0.230769 0.607692 0.830769", label="36 X Residual Rubber (3600%)\lcircuit 24\l-   4  40.00  1440.00 Polymer Resin\l-   4  40.00  1440.00 Water\l+   2  20.00   720.00 Rubber\l\lPos: -198696 202880 -17.4389\l294697 298572 \lInputs:Output1->294592\l" ];
+93912537181776 -> 285883;
+
+298724 -> 93912537181776;
+
+93912537181776 [color="0.230769 0.607692 0.830769", label="70 X Silica (7000%)\lcircuit 24\l-   3  22.50  1575.00 Raw Quartz\l+   5  37.50  2625.00 Silica\l\lPos: -110641 237794 3983.09\l298724 \lInputs:Output0->285883\l" ];
+93912535599216 -> 290785;
+
+288443 -> 93912535599216;
+
+289885 -> 93912535599216;
+
+93912535599216 [color="0.230769 0.607692 0.830769", label="64 X Smart Plating (6400%)\lcircuit 24\l-   1   2.00   128.00 Reinforced Iron Plate\l-   1   2.00   128.00 Rotor\l+   1   2.00   128.00 Smart Plating\l\lPos: -61996.1 195480 2382.46\l288443 289885 \lInputs:Output0->290785\l" ];
+93912535446608 -> 261101;
+
+276267 -> 93912535446608;
+
+279867 -> 93912535446608;
+
+93912535446608 [color="0.230769 0.607692 0.830769", label="18 X Versatile Framework (1800%)\lcircuit 24\l-  12  30.00   540.00 Steel Beam\l-   1   2.50    45.00 Modular Frame\l+   2   5.00    90.00 Versatile Framework\l\lPos: -62440.3 207097 2382.96\l276267 279867 \lInputs:Output0->261101\l" ];
+93912535115840 -> 266471;
+
+284699 -> 93912535115840;
+
+286329 -> 93912535115840;
+
+93912535115840 [color="0.230769 0.607692 0.830769", label="54 X Automated Wiring (5400%)\lcircuit 24\l-  20  50.00  2700.00 Cable\l-   1   2.50   135.00 Stator\l+   1   2.50   135.00 Automated Wiring\l\lPos: -38678.5 202660 2383.1\l284699 286329 \lInputs:Output0->266471\l" ];
+93912535453264 -> 287491;
+
+287307 -> 93912535453264;
+
+290785 -> 93912535453264;
+
+294592 -> 93912535453264;
+
+93912535453264 [color="0.230769 0.607692 0.830769", label="32 X Modular Engine (6400%)\lcircuit 24\l-   2   2.00   128.00 Smart Plating\l-   2   2.00   128.00 Motor\l-  15  15.00   960.00 Rubber\l+   1   1.00    64.00 Modular Engine\l\lPos: -109127 216856 10383\l287307 290785 294592 \lInputs:Output0->287491\l" ];
+93912535682160 -> 271771;
+
+266471 -> 93912535682160;
+
+275939 -> 93912535682160;
+
+287263 -> 93912535682160;
+
+288243 -> 93912535682160;
+
+93912535682160 [color="0.230769 0.607692 0.830769", label="18 X Adaptive Control Unit (1800%)\lcircuit 24\l-  15   7.50   135.00 Automated Wiring\l-  10   5.00    90.00 Circuit Board\l-   2   1.00    18.00 Heavy Modular Frame\l-   2   1.00    18.00 Computer\l+   2   1.00    18.00 Adaptive Control Unit\l\lPos: -58513.4 196990 7183.09\l266471 275939 287263 288243 \lInputs:Output0->271771\l" ];
+261099 -> 93912535454096;
+
+261101 -> 93912535454096;
+
+273101 -> 93912535454096;
+
+93912535454096 [color="0.230769 0.607692 0.830769", label="10 X Magnetic Field Generator (1000%)\lcircuit 24\l-  10   5.00    50.00 Battery\l-   5   2.50    25.00 Versatile Framework\l-   2   1.00    10.00 Electromagnetic Control Rod\l+   2   1.00    10.00 Magnetic Field Generator\l\lPos: -81001.7 205357 8783.09\l261099 261101 261105 273101 \lInputs:Output0->286835\l" ];
+93912535896848 -> 287565;
+
+271771 -> 93912535896848;
+
+271775 -> 93912535896848;
+
+93912535896848 [color="0.230769 0.607692 0.830769", label="12 X Assembly Director System (1200%)\lcircuit 24\l-   2   1.50    18.00 Adaptive Control Unit\l-   1   0.75     9.00 Supercomputer\l+   1   0.75     9.00 Assembly Director System\l\lPos: -78341.1 209163 2383.02\l271771 271775 \lInputs:Output0->287565\l" ];
+93912535469952 -> 287565;
+
+287491 -> 93912535469952;
+
+287495 -> 93912535469952;
+
+287497 -> 93912535469952;
+
+287565 -> 93912535469952;
+
+93912535469952 [color="0.230769 0.607692 0.830769", label="24 X Thermal Propulsion Rocket (2400%)\lcircuit 24\l-   5   2.50    60.00 Modular Engine\l-   6   3.00    72.00 Cooling System\l-   2   1.00    24.00 Fused Modular Frame\l-   2   1.00    24.00 Turbo Motor\l+   2   1.00    24.00 Thermal Propulsion Rocket\l\lPos: -92011.5 198147 10383\l287491 287495 287497 287565 \lInputs:Output0->287565\l" ];
+93912535291712 -> 287565;
+
+286063 -> 93912535291712;
+
+288325 -> 93912535291712;
+
+93912535291712 [color="0.615385 0.453846 0.815385", label="9 X Nuclear Pasta (779.4%)\lcircuit 12\l-   1   0.50     3.90 Pressure Conversion Cube\l- 200 100.00   779.40 Copper Powder\l+   1   0.50     3.90 Nuclear Pasta\l\lPos: -31596.1 221180 11982.5\l286063 288325 \lInputs:Output0->287565\l" ];
+93912535495200 -> 286329;
+
+288525 -> 93912535495200;
+
+290381 -> 93912535495200;
+
+93912535495200 [color="0.230769 0.607692 0.830769", label="72 X Stator (7200%)\lcircuit 24\l-   8  40.00  2880.00 Wire\l-   3  15.00  1080.00 Steel Pipe\l+   1   5.00   360.00 Stator\l\lPos: -29683.6 243560 5583.04\l288525 290381 \lInputs:Output0->286329\l" ];
+93912537177376 -> 279867;
+
+278027 -> 93912537177376;
+
+93912537177376 [color="0.230769 0.607692 0.830769", label="26 X Steel Beam (2600%)\lcircuit 24\l-   4  60.00  1560.00 Steel Ingot\l+   1  15.00   390.00 Steel Beam\l\lPos: -77903.5 201722 3983.09\l278027 \lInputs:Output0->279867\l" ];
+93912535286976 -> 290787;
+
+290789 -> 93912535286976;
+
+93912535286976 [color="0 0.3 0.8", label="4 X Steel Pipe (400%)\lcircuit 0\l-   3  30.00   120.00 Steel Ingot\l+   2  20.00    80.00 Steel Pipe\l\lPos: -1824.63 277968 -123.732\l290789 \lInputs:Output0->290787\l" ];
+93912535025808 -> 290381;
+
+278027 -> 93912535025808;
+
+93912535025808 [color="0.230769 0.607692 0.830769", label="96 X Steel Pipe (9600%)\lcircuit 24\l-   3  30.00  2880.00 Steel Ingot\l+   2  20.00  1920.00 Steel Pipe\l\lPos: -53483.2 268816 3983.09\l278027 \lInputs:Output0->290381\l" ];
+93912535195088 -> 240578;
+
+298774 -> 93912535195088;
+
+299045 -> 93912535195088;
+
+93912535195088 [color="0.230769 0.607692 0.830769", label="7 X Sulfuric Acid (700%)\lcircuit 24\l-   5  50.00   350.00 Water\l-   5  50.00   350.00 Sulfur\l+   5  50.00   350.00 Sulfuric Acid\l\lPos: 76753.1 118156 15083\l298774 299045 \lInputs:PipeOutputFactory->240578\l" ];
+240242 [shape=none,label="240242\l"];
+ 
+240346 [shape=none,label="240346\l"];
+ 
+240578 [shape=none,label="240578\l"];
+ 
+240602 [shape=none,label="240602\l"];
+ 
+240620 [shape=none,label="240620\l"];
+ 
+240628 [shape=none,label="240628\l"];
+ 
+240636 [shape=none,label="240636\l"];
+ 
+240694 [shape=none,label="240694\l"];
+ 
+240979 [shape=none,label="240979\lAlclad Aluminum Sheet\l"];
+ 
+240997 [shape=none,label="240997\lHeat Sink\l"];
+ 
+241071 [shape=none,label="241071\lRadio Control Unit\l"];
+ 
+242127 [shape=none,label="242127\l"];
+ 
+249385 [shape=none,label="249385\l"];
+ 
+250167 [shape=none,label="250167\l"];
+ 
+250169 [shape=none,label="250169\lCaterium Ingot\l"];
+ 
+250925 [shape=none,label="250925\l"];
+ 
+252991 [shape=none,label="252991\lCaterium Ingot\l"];
+ 
+252999 [shape=none,label="252999\l"];
+ 
+253347 [shape=none,label="253347\lCopper Ingot\l"];
+ 
+253383 [shape=none,label="253383\lCopper Ingot\l"];
+ 
+253397 [shape=none,label="253397\lIron Ore\l"];
+ 
+253411 [shape=none,label="253411\lCopper Ore\l"];
+ 
+255301 [shape=none,label="255301\l"];
+ 
+255377 [shape=none,label="255377\l"];
+ 
+255393 [shape=none,label="255393\l"];
+ 
+257751 [shape=none,label="257751\lScrew\l"];
+ 
+258385 [shape=none,label="258385\l"];
+ 
+259097 [shape=none,label="259097\lCompacted Coal\l"];
+ 
+261099 [shape=none,label="261099\lBattery\l"];
+ 
+261101 [shape=none,label="261101\lVersatile Framework\l"];
+ 
+262924 [shape=none,label="262924\l"];
+ 
+266471 [shape=none,label="266471\lAutomated Wiring\l"];
+ 
+267645 [shape=none,label="267645\lRadio Control Unit\l"];
+ 
+267651 [shape=none,label="267651\lFused Modular Frame\l"];
+ 
+267657 [shape=none,label="267657\l"];
+ 
+267663 [shape=none,label="267663\l"];
+ 
+267971 [shape=none,label="267971\lAlclad Aluminum Sheet\l"];
+ 
+268581 [shape=none,label="268581\lRadio Control Unit\l"];
+ 
+271537 [shape=none,label="271537\l"];
+ 
+271771 [shape=none,label="271771\lAdaptive Control Unit\l"];
+ 
+271775 [shape=none,label="271775\lSupercomputer\l"];
+ 
+273101 [shape=none,label="273101\lElectromagnetic Control Rod\l"];
+ 
+273191 [shape=none,label="273191\lHigh-Speed Connector\l"];
+ 
+274039 [shape=none,label="274039\lQuartz Crystal\l"];
+ 
+275939 [shape=none,label="275939\lCircuit Board\l"];
+ 
+275959 [shape=none,label="275959\lSteel Beam\l"];
+ 
+275967 [shape=none,label="275967\lScrew\l"];
+ 
+276267 [shape=none,label="276267\lModular Frame\l"];
+ 
+277163 [shape=none,label="277163\lAluminum Casing\l"];
+ 
+278027 [shape=none,label="278027\lSteel Ingot\l"];
+ 
+279815 [shape=none,label="279815\lScrew\l"];
+ 
+279867 [shape=none,label="279867\lSteel Beam\l"];
+ 
+280489 [shape=none,label="280489\l"];
+ 
+280579 [shape=none,label="280579\lCaterium Ingot\l"];
+ 
+283433 [shape=none,label="283433\lAI Limiter\l"];
+ 
+283435 [shape=none,label="283435\lCopper Sheet\l"];
+ 
+283809 [shape=none,label="283809\lQuickwire\l"];
+ 
+284621 [shape=none,label="284621\lSteel Pipe\l"];
+ 
+284639 [shape=none,label="284639\lCrystal Oscillator\l"];
+ 
+284681 [shape=none,label="284681\lBeacon\l"];
+ 
+284699 [shape=none,label="284699\lCable\l"];
+ 
+284703 [shape=none,label="284703\lIron Rod\l"];
+ 
+285127 [shape=none,label="285127\lQuickwire\l"];
+ 
+285839 [shape=none,label="285839\lQuickwire\l"];
+ 
+285883 [shape=none,label="285883\lSilica\l"];
+ 
+286063 [shape=none,label="286063\lPressure Conversion Cube\l"];
+ 
+286329 [shape=none,label="286329\lStator\l"];
+ 
+287063 [shape=none,label="287063\lEncased Industrial Beam\l"];
+ 
+287253 [shape=none,label="287253\lIron Plate\l"];
+ 
+287263 [shape=none,label="287263\lHeavy Modular Frame\l"];
+ 
+287307 [shape=none,label="287307\lMotor\l"];
+ 
+287327 [shape=none,label="287327\lHeat Sink\l"];
+ 
+287491 [shape=none,label="287491\lModular Engine\l"];
+ 
+287495 [shape=none,label="287495\lFused Modular Frame\l"];
+ 
+287497 [shape=none,label="287497\lCooling System\l"];
+ 
+287565 [shape=none,label="287565\lTurbo Motor\lAssembly Director System\lThermal Propulsion Rocket\lNuclear Pasta\l"];
+ 
+288243 [shape=none,label="288243\lComputer\l"];
+ 
+288291 [shape=none,label="288291\lIron Ingot\l"];
+ 
+288325 [shape=none,label="288325\lCopper Powder\l"];
+ 
+288443 [shape=none,label="288443\lRotor\l"];
+ 
+288523 [shape=none,label="288523\lPetroleum Coke\l"];
+ 
+288525 [shape=none,label="288525\lWire\l"];
+ 
+288541 [shape=none,label="288541\lGas Filter\l"];
+ 
+288677 [shape=none,label="288677\lAluminum Ingot\l"];
+ 
+288711 [shape=none,label="288711\lAluminum Scrap\l"];
+ 
+288843 [shape=none,label="288843\lCaterium Ingot\l"];
+ 
+288849 [shape=none,label="288849\lQuickwire\l"];
+ 
+288913 [shape=none,label="288913\lRotor\l"];
+ 
+288915 [shape=none,label="288915\lMotor\l"];
+ 
+288937 [shape=none,label="288937\lReinforced Iron Plate\l"];
+ 
+288957 [shape=none,label="288957\lModular Frame\l"];
+ 
+288985 [shape=none,label="288985\lWire\l"];
+ 
+289013 [shape=none,label="289013\lIron Plate\l"];
+ 
+289129 [shape=none,label="289129\lIron Ore\l"];
+ 
+289237 [shape=none,label="289237\lQuartz Crystal\l"];
+ 
+289297 [shape=none,label="289297\lHigh-Speed Connector\l"];
+ 
+289305 [shape=none,label="289305\lComputer\l"];
+ 
+289309 [shape=none,label="289309\lPlastic\l"];
+ 
+289323 [shape=none,label="289323\lSupercomputer\l"];
+ 
+289357 [shape=none,label="289357\lPackaged Fuel\l"];
+ 
+289431 [shape=none,label="289431\lIron Ingot\l"];
+ 
+289507 [shape=none,label="289507\lCircuit Board\l"];
+ 
+289529 [shape=none,label="289529\lEncased Industrial Beam\l"];
+ 
+289533 [shape=none,label="289533\lCopper Ore\l"];
+ 
+289583 [shape=none,label="289583\lWire\l"];
+ 
+289603 [shape=none,label="289603\lConcrete\l"];
+ 
+289699 [shape=none,label="289699\lAI Limiter\l"];
+ 
+289713 [shape=none,label="289713\lRubber\l"];
+ 
+289718 [shape=none,label="289718\l"];
+ 
+289805 [shape=none,label="289805\lAluminum Ingot\l"];
+ 
+289807 [shape=none,label="289807\lCopper Ingot\l"];
+ 
+289823 [shape=none,label="289823\lStator\l"];
+ 
+289827 [shape=none,label="289827\lRaw Quartz\l"];
+ 
+289831 [shape=none,label="289831\lCompacted Coal\l"];
+ 
+289849 [shape=none,label="289849\lBlack Powder\l"];
+ 
+289869 [shape=none,label="289869\lCrystal Oscillator\l"];
+ 
+289871 [shape=none,label="289871\lDesc_NobeliskExplosive_C\l"];
+ 
+289885 [shape=none,label="289885\lReinforced Iron Plate\l"];
+ 
+289927 [shape=none,label="289927\lSilica\l"];
+ 
+289941 [shape=none,label="289941\lBlack Powder\l"];
+ 
+289957 [shape=none,label="289957\lFabric\l"];
+ 
+290381 [shape=none,label="290381\lSteel Pipe\l"];
+ 
+290401 [shape=none,label="290401\lCopper Ingot\l"];
+ 
+290405 [shape=none,label="290405\lCaterium Ingot\l"];
+ 
+290665 [shape=none,label="290665\lConcrete\l"];
+ 
+290681 [shape=none,label="290681\l"];
+ 
+290733 [shape=none,label="290733\l"];
+ 
+290755 [shape=none,label="290755\l"];
+ 
+290785 [shape=none,label="290785\lSmart Plating\l"];
+ 
+290787 [shape=none,label="290787\lSteel Pipe\l"];
+ 
+290789 [shape=none,label="290789\lSteel Ingot\l"];
+ 
+294582 [shape=none,label="294582\lPlastic\l"];
+ 
+294592 [shape=none,label="294592\lRubber\l"];
+ 
+294697 [shape=none,label="294697\lPolymer Resin\l"];
+ 
+294737 [shape=none,label="294737\lRubber\l"];
+ 
+294742 [shape=none,label="294742\lPlastic\l"];
+ 
+294817 [shape=none,label="294817\l"];
+ 
+294841 [shape=none,label="294841\l"];
+ 
+296645 [shape=none,label="296645\l"];
+ 
+298572 [shape=none,label="298572\l"];
+ 
+298588 [shape=none,label="298588\lLimestone\l"];
+ 
+298609 [shape=none,label="298609\lCoal\l"];
+ 
+298654 [shape=none,label="298654\lLimestone\l"];
+ 
+298669 [shape=none,label="298669\lSulfur\l"];
+ 
+298724 [shape=none,label="298724\lRaw Quartz\l"];
+ 
+298739 [shape=none,label="298739\lCaterium Ore\l"];
+ 
+298759 [shape=none,label="298759\lCopper Ore\l"];
+ 
+298774 [shape=none,label="298774\lSulfur\l"];
+ 
+298794 [shape=none,label="298794\lIron Ore\l"];
+ 
+298805 [shape=none,label="298805\lBauxite\l"];
+ 
+299045 [shape=none,label="299045\l"];
+ 
+299683 [shape=none,label="299683\lConcrete\lUranium Fuel Rod\l"];
+ 
+299684 [shape=none,label="299684\l"];
+ 
+299685 [shape=none,label="299685\l"];
+ 
+}
