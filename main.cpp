@@ -943,16 +943,36 @@ struct TextProperty { // omfg
         history_type = b.inc<uint8_t>();
         prt((int) history_type);
         switch (history_type) {
-            case ETextHistoryType::Base:
+            case ETextHistoryType::Base: // 0
                 namedatas.emplace_back(NameData{RepeatedPrimitiveType<char>(b),
 //                        b.inc<std::array<uint8_t, 14> >(),
                                                 RepeatedPrimitiveType<char>(b),
                                                 RepeatedPrimitiveType<char>(b)});
                 break;
-            case ETextHistoryType::ArgumentFormat:
+            case ETextHistoryType::ArgumentFormat: // 3
+            {
+                printMemory(b.ptr + b.offset, b.ptr + b.offset + 1000);
+                TextProperty sourceFmt(b);
+                const int32_t argumentsCount = b.inc<int32_t>();
+                assertss(argumentsCount < 10000, pt(argumentsCount));
+                for (int32_t i = 0; i < argumentsCount; ++i) {
 
-                assert(false);
+                    RepeatedPrimitiveType<char> name(b);
+                    const int8_t valueType = b.inc<int8_t>();
+                    switch (valueType) {
+                        case 4: {
+                            TextProperty argumentValue(b);
+                            break;
+                        }
+                        default:
+                            assert(false);
+                    }
+
+                }
+
+//                assert(false);
                 break;
+            }
             case ETextHistoryType::None:
                 // nothing to be done.
                 if (b.buildVersion >= CultureInvariantChangeBuild) {
@@ -1431,7 +1451,7 @@ struct MapProperty {
     int32_t count;
 
     struct KeyValue {
-        std::variant<std::monostate, int32_t, uint8_t, ObjectReference> key; //,  RepeatedPrimitiveType<int32_t>, RepeatedPrimitiveType<uint8_t>
+        std::variant<std::monostate, int32_t, uint8_t, ObjectReference, EnumProperty, RepeatedPrimitiveType<char> > key; //,  RepeatedPrimitiveType<int32_t>, RepeatedPrimitiveType<uint8_t>
         std::variant<std::monostate, int32_t, std::vector<PropertyType>, uint8_t> value;
 //        std::vector<std::unique_ptr<PropertyType> > props;
 
@@ -1479,7 +1499,7 @@ struct ArrayProperty {
         int32_t structSize;
         RepeatedPrimitiveType<char> structInnerType;
         std::array<char, 16> guid;
-        std::variant<std::monostate, std::vector<StructLinearColor>, std::vector<SerializedFields> > properties; //std::vector<std::unique_ptr<PropertyType> > ,
+        std::variant<std::monostate, std::vector<StructLinearColor>, std::vector<SerializedFields>, std::vector<StructVector> > properties; //std::vector<std::unique_ptr<PropertyType> > ,
 
         StructBS(Builder &b);
     };
@@ -1794,6 +1814,11 @@ ArrayProperty::StructBS::StructBS(Builder &b) : count(b.inc<int32_t>()),  // let
 
     if (eq(StructLinearColor::tname, structInnerType)) {
         auto &v = properties.emplace<std::vector<StructLinearColor>>();
+        for (int32_t i = 0; i < count; ++i) {
+            v.emplace_back(b);
+        }
+    }else if (eq(StructVector::tname, structInnerType)) {
+        auto &v = properties.emplace<std::vector<StructVector>>();
         for (int32_t i = 0; i < count; ++i) {
             v.emplace_back(b);
         }
@@ -2223,8 +2248,13 @@ MapProperty::KeyValue::KeyValue(Builder &b, const RepeatedPrimitiveType<char> &k
         key.emplace<uint8_t>(b.inc<uint8_t>());
 //    } else if (eq(InterfaceProperty::tname, keytype)) {
 //        key.emplace<RepeatedType<InterfaceProperty> >(b);
+    } else if (eq("EnumProperty", keytype)) {
+        printMemory(b.ptr + b.offset, b.ptr + b.offset + 100);
+        key.emplace<RepeatedPrimitiveType<char>>(b);
     } else {
+
         prt(keytype);
+        printMemory(b.ptr + b.offset, b.ptr + b.offset + 100);
         assert(false);
     }
 
@@ -3707,6 +3737,8 @@ void printJson(W &w, const ArrayProperty::StructBS &t) noexcept {
 
     if (eq(StructLinearColor::tname, t.structInnerType)) {
         printJson(w, std::get<std::vector<StructLinearColor> >(t.properties));
+    }else     if (eq(StructVector::tname, t.structInnerType)) {
+        printJson(w, std::get<std::vector<StructVector> >(t.properties));
     } else { // if (eq("RemovedInstance", structInnerType)) {
         printJson(w, std::get<std::vector<SerializedFields> >(t.properties));
     }
@@ -3919,7 +3951,7 @@ int main() {
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_111121-204114.sav");
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_171121-175958.sav"); mmm2_181121-132253.sav
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_181121-132253.sav");
-    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_281121-205216.sav");
+//    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_281121-205216.sav");
     mmf.initialise();
     prt(mmf.size);
     assert(mmf.d);
