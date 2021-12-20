@@ -1800,7 +1800,9 @@ ArrayProperty::StructBS::StructBS(Builder &b) : count(b.inc<int32_t>()),  // let
                                               "InserterBuildingProfile",
                                               "BRN_Base_FrackingSatelliteInfo",
                                               "FINCommandLabelReferences",
-                                              "FINCommandLabelData"};
+                                              "FINCommandLabelData",
+                                              "MiniGameResult"};
+//structName = 'mTetrominoLeaderBoard'	structInnerType = 'MiniGameResult'
 
     for (const auto &sfname : sfnames) {
         if (eq(sfname, structInnerType)) {
@@ -1824,7 +1826,7 @@ ArrayProperty::StructBS::StructBS(Builder &b) : count(b.inc<int32_t>()),  // let
         }
 
     } else {
-
+        printMemory(b.ptr + b.offset, b.ptr + b.offset + 900);
         assert(false);
 
     }
@@ -3211,10 +3213,11 @@ struct SatisfactorySavPayload {
 //                oss << "\\n(" << aid_group.second.buildingids.size() << ", " << aid_group.first.inputeqclasses.size() << ", " << aid_group.first.outputs_eqclasses.size() << ")\\n";
                 oss << "\\l";
                 oss << "Pos: " << aid_group.second.examplePosition[0] << " " << aid_group.second.examplePosition[1] << " " << aid_group.second.examplePosition[2] << "\\l";
+                oss << "Inputs:";
                 for (auto &i : aid_group.first.inputeqclasses) {
                     oss << i << " ";
                 }
-                oss << "\\lInputs:";
+                oss << "\\l";
                 for (auto &i : aid_group.first.outputs_eqclasses) {
                     oss << i.first << "->" << i.second << "\\l";
                 }
@@ -3952,6 +3955,9 @@ int main() {
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_171121-175958.sav"); mmm2_181121-132253.sav
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_181121-132253.sav");
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_281121-205216.sav");
+
+
+    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/therapy_autosave_0.sav");
     mmf.initialise();
     prt(mmf.size);
     assert(mmf.d);
