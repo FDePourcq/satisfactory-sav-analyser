@@ -643,7 +643,16 @@ struct MemSize<int32_t> {
     static const size_t v = 4;
 };
 template<>
+struct MemSize<uint32_t> {
+    static const size_t v = 4;
+};
+
+template<>
 struct MemSize<int64_t> {
+    static const size_t v = 8;
+};
+template<>
+struct MemSize<uint64_t> {
     static const size_t v = 8;
 };
 template<>
@@ -696,6 +705,15 @@ struct Builder {
         return ret;
     }
 
+    template<typename T>
+    T peak() {
+        std::array<char, MemSize<T>::v> alignedmem;
+        memcpy(alignedmem.data(), ptr + offset, MemSize<T>::v);
+
+        T ret = *reinterpret_cast< T const * >(alignedmem.data());
+        return ret;
+    }
+
 
     int32_t readBuildVersion() {
         int32_t ret = inc<int32_t>();
@@ -723,6 +741,14 @@ struct Builder {
         assert(inc<int32_t>() == 0x0);
         return *this;
     }
+
+    Builder &printMem(const int nbytes = 128) {
+        std::cout << "=====================" << std::endl;
+        std::cout.flush();
+        printMemory(ptr + offset, ptr + offset + nbytes);
+        return *this;
+    }
+
 
 };
 
@@ -817,6 +843,7 @@ struct RepeatedType : public std::vector<T> {
 ////        assert(n < 1000 && n > 0);
 //        std::vector<T>::reserve(n);
         for (int32_t i = 0; i < n; ++i) {
+            std::cerr << "RepeatedType " << i << " from " << n << std::endl;
             std::vector<T>::emplace_back(b);
         }
     }
@@ -882,7 +909,6 @@ struct ObjectReference {
     ObjectReference(Builder &b) :
             levelName(b),
             pathName(b) {
-        prt2(levelName, pathName);
     }
 
 };
@@ -941,7 +967,6 @@ struct TextProperty { // omfg
 
         flags = b.inc<int32_t>();
         history_type = b.inc<uint8_t>();
-        prt((int) history_type);
         switch (history_type) {
             case ETextHistoryType::Base: // 0
                 namedatas.emplace_back(NameData{RepeatedPrimitiveType<char>(b),
@@ -1403,12 +1428,6 @@ struct StructVector : std::array<float, 3> {
                                                      b.inc<float>()}) {
 //        assert(false);
     }
-
-//    StructVector(Builder &b) : x(b.inc<float>()),
-//                               y(b.inc<float>()),
-//                               z(b.inc<float>()) {
-////        assert(false);
-//    }
 };
 
 struct StructDroneDockingStateInfo {
@@ -1464,7 +1483,21 @@ struct MapProperty {
     MapProperty(Builder &b);
 };
 
+struct NameProperty;
+
+
 const std::string MapProperty::tname = "MapProperty";
+
+struct SetProperty  {
+    static const std::string tname;
+    RepeatedPrimitiveType<char> valueType;
+    int32_t len;
+
+    std::vector<std::variant<int32_t, ObjectReference, StructProperty, NameProperty > > values;
+    SetProperty(Builder &b);
+};
+
+const std::string SetProperty::tname = "SetProperty";
 
 struct InterfaceProperty : public ObjectReference {
     static const std::string tname;
@@ -1507,6 +1540,7 @@ struct ArrayProperty {
     std::variant<std::monostate,
             RepeatedType<ObjectReference>,
             StructBS, // this is a list of keyvaluepairs it seems?
+            RepeatedPrimitiveType<int64_t>,
             RepeatedPrimitiveType<int32_t>,
             RepeatedPrimitiveType<uint8_t>,
             RepeatedType<InterfaceProperty>,
@@ -1600,7 +1634,8 @@ struct PropertyType {
             MapProperty,
             TextProperty,
             ByteProperty,
-            bool> content;
+            bool,
+            SetProperty> content;
 
     PropertyType(Builder &b);
 };
@@ -1801,7 +1836,14 @@ ArrayProperty::StructBS::StructBS(Builder &b) : count(b.inc<int32_t>()),  // let
                                               "BRN_Base_FrackingSatelliteInfo",
                                               "FINCommandLabelReferences",
                                               "FINCommandLabelData",
-                                              "MiniGameResult"};
+                                              "MiniGameResult",
+                                              "MapMarker",
+                                              "ScannableObjectData",
+                                              "ResourceSinkHistory",
+                                              "BlueprintCategoryRecord",
+                                              "BlueprintSubCategoryRecord",
+                                              "ShoppingListBlueprintEntry",
+                                              "ShoppingListRecipeEntry"};
 //structName = 'mTetrominoLeaderBoard'	structInnerType = 'MiniGameResult'
 
     for (const auto &sfname : sfnames) {
@@ -1819,7 +1861,7 @@ ArrayProperty::StructBS::StructBS(Builder &b) : count(b.inc<int32_t>()),  // let
         for (int32_t i = 0; i < count; ++i) {
             v.emplace_back(b);
         }
-    }else if (eq(StructVector::tname, structInnerType)) {
+    } else if (eq(StructVector::tname, structInnerType)) {
         auto &v = properties.emplace<std::vector<StructVector>>();
         for (int32_t i = 0; i < count; ++i) {
             v.emplace_back(b);
@@ -1856,11 +1898,15 @@ ArrayProperty::ArrayProperty(Builder &b) :
 
     } else if (eq("IntProperty", itemType)) {
         content.emplace<RepeatedPrimitiveType<int32_t> >(b);
+    } else if (eq("Int64Property", itemType)) {
+        content.emplace<RepeatedPrimitiveType<int64_t> >(b);
     } else if (eq("ByteProperty", itemType)) {
         content.emplace<RepeatedPrimitiveType<uint8_t> >(b);
     } else if (eq(InterfaceProperty::tname, itemType)) {
         content.emplace<RepeatedType<InterfaceProperty> >(b);
-    } else if (eq(EnumProperty::tname, itemType)) {
+    } else if (eq(EnumProperty::tname, itemType) ) {
+        content.emplace<RepeatedType<RepeatedPrimitiveType<char>>>(b);
+    } else if (eq("StrProperty", itemType) ) {
         content.emplace<RepeatedType<RepeatedPrimitiveType<char>>>(b);
 
     } else {
@@ -1889,6 +1935,29 @@ MapProperty::MapProperty(Builder &b) :
 //content
 
 
+}
+
+SetProperty::SetProperty(Builder &b):
+        valueType(b),
+        len(b.skip(5).inc<int32_t>()){
+    //...
+    for (int32_t i = 0; i < len; ++i) {
+
+        if (eq(ObjectReference::tname, valueType)) {
+            values.emplace_back<ObjectReference>(b);
+        } else if (eq(StructProperty::tname, valueType)) {
+            //values.emplace_back<StructProperty>(b);
+            b.inc<float>();
+            b.inc<float>();
+            b.inc<float>();
+        } else if (eq(NameProperty::tname, valueType)) {
+            values.emplace_back<NameProperty>(b);
+        } else if (eq("IntProperty", valueType)) {
+            values.emplace_back(b.inc<int32_t>());
+        } else{
+            assert(false);
+        }
+    }
 }
 
 
@@ -2066,12 +2135,10 @@ PropertyType::PropertyType(Builder &b) :  //readPropertyV5
         content.emplace<int64_t>(b.assertNullByte().inc<int64_t>());
     } else if (eq("Int8Property", header->fieldType)) {
         content.emplace<int8_t>(b.assertNullByte().inc<int8_t>());
-
     } else if (eq("ByteProperty", header->fieldType)) {
         content.emplace<ByteProperty>(b);
-
-
-
+    } else if (eq("SetProperty", header->fieldType)) {
+        content.emplace<SetProperty>(b);
 //    } else if (header->fieldType.n > 40 && header->fieldType < 160) {
 //        // just assume
     } else {
@@ -2119,13 +2186,14 @@ struct WorldObject { // depending on the type it can be multiple things ...
 //    std::vector<PropertyType> serializedFields;
 
     WorldObject(Builder &b) :
-            worldobjecttype(b.inc<int32_t>()),
+            worldobjecttype(b.inc<int32_t>()),   //this.readInt(); // objectsBinaryLength  ????
             typePath(b),
             rootObject(b),
             instanceName(b) {
+//        prt2(worldobjecttype, typePath);
         switch (worldobjecttype) {
             case 1:
-                v.emplace<SaveEntity>(b); //readActorV5
+                v.emplace<SaveEntity>(b); //readActorV5, this.readActor();
                 break;
             case 0:
                 v.emplace<SaveComponent>(b);  // readObjectV5
@@ -2140,7 +2208,7 @@ struct WorldObject { // depending on the type it can be multiple things ...
     void parseAdditionalData(Builder &b) { //readEntityV5
         int32_t len = b.inc<int32_t>();
         std::size_t start_offset = b.offset;  // "before"
-        prt((int) worldobjecttype);
+//        prt((int) worldobjecttype);
 
         int32_t remainingbytes = len;
         int32_t end_of_struct = start_offset + len;
@@ -2223,6 +2291,66 @@ struct WorldObject { // depending on the type it can be multiple things ...
 };
 
 
+struct Level {
+
+    int64_t startoffset;
+
+    RepeatedPrimitiveType<char> levelname;
+    int64_t objectsBinaryLength;
+    RepeatedType<WorldObject> worldObjects;
+    int64_t countCollected;
+    int64_t objectsBinaryLength2;
+    int64_t countEntities;
+
+
+    void init(Builder &b){
+        prt2(countCollected, worldObjects.size());
+
+        for (auto i = 0; i < countCollected; ++i){
+            ObjectReference obj(b); // wtf
+        }
+        objectsBinaryLength2 = b.inc<int32_t>();
+        countEntities = b.inc<int32_t>();
+
+        prt3(objectsBinaryLength, objectsBinaryLength2, countEntities);
+
+        assert(worldObjects.size() == countEntities);
+        for (auto &wo : worldObjects) {
+            wo.parseAdditionalData(b); //readEntityV5
+        }
+
+        int64_t countCollected2 = b.inc<int32_t>();
+        assert(countCollected == countCollected2);
+        for (auto i = 0; i < countCollected2; ++i){
+            ObjectReference obj(b);
+        }
+
+        prt4(b.offset - startoffset , objectsBinaryLength,objectsBinaryLength2 , objectsBinaryLength+objectsBinaryLength2 );
+
+        assert(b.offset - startoffset >= objectsBinaryLength + objectsBinaryLength2);
+//        b.offset = startoffset + objectsBinaryLength;
+    }
+
+
+    Level(Builder &b) :
+            startoffset(b.offset),
+            levelname(b),
+            objectsBinaryLength(b.inc<int32_t>()),
+            worldObjects(b),
+            countCollected (b.inc<int32_t>()) {
+        init(b);
+    }
+    Level(Builder &b, bool is_last_level) :
+            startoffset(b.offset),
+            levelname(23, "Level Persistent_Level" ),
+            objectsBinaryLength(b.inc<int32_t>()),
+            worldObjects(b),
+            countCollected (b.inc<int32_t>()) {
+        init(b);
+    }
+
+};
+
 MapProperty::KeyValue::KeyValue(Builder &b, const RepeatedPrimitiveType<char> &keytype, const RepeatedPrimitiveType<char> &valuetype) {
 
 //    b.skip<char>();
@@ -2301,13 +2429,17 @@ struct CompressedBlock {
             currentChunkUncompressedLength(b.inc<int64_t>()),
             currentChunkCompressedLength2(b.inc<int64_t>()),
             currentChunkUncompressedLength2(b.inc<int64_t>()) {
-        prt(packageFileTag);
+        //      prt(currentChunkCompressedLength);
+        prt6(packageFileTag, maximumChunkSize, currentChunkCompressedLength, currentChunkUncompressedLength, currentChunkCompressedLength2, currentChunkUncompressedLength2);
+
         compressedData = b.ptr + b.offset;
         b.offset += currentChunkCompressedLength;
-        assert(packageFileTag == 0x9E2A83C1);  //CompressedBlock::CompressedBlock
+        //prt3(b.offset,b.maxoffset,currentChunkCompressedLength);
+        assert(b.offset <= b.maxoffset);
+        assert(packageFileTag == 0x9E2A83C1);  //CompressedBlock::CompressedBlock     2653586369
         assert(currentChunkCompressedLength == currentChunkCompressedLength2);
         assert(currentChunkUncompressedLength == currentChunkUncompressedLength2);
-        prt4(packageFileTag, maximumChunkSize, currentChunkCompressedLength, currentChunkUncompressedLength2);
+        //prt4(packageFileTag, maximumChunkSize, currentChunkCompressedLength, currentChunkUncompressedLength2);
     }
 };
 
@@ -2424,9 +2556,10 @@ void mergeEqClasses(std::vector<std::size_t> &eqclasses, const std::vector<std::
 
 }
 
+
 struct SatisfactorySavPayload {
     int32_t bufferSize;//, numObjects, maybe3, maybe4, maybe5, maybe6;
-    RepeatedType<WorldObject> worldObjects;
+    RepeatedType<Level> levels;
     int32_t totalSaveObjectData;
     //int32_t collectedObjectsCount;
     std::optional<RepeatedType<ObjectReference>> collectedObjects;
@@ -2435,33 +2568,42 @@ struct SatisfactorySavPayload {
     // lookup structures for every instancetype
     std::vector<std::size_t> ordered_indexes;
 
-
+    std::vector<WorldObject *> worldObjects; // concatenated copy of all the worldobjects in levels.
     SatisfactorySavPayload(Builder &b) :
-            bufferSize(b.inc<int32_t>()),
-//            numObjects(b.inc<int32_t>()),
-//            maybe3(b.inc<int32_t>()),
+            bufferSize(b.inc<int32_t>()),   // this we already know, it is the near the size of the inflated/decompressed data (in bytes).
+            levels(b) {
+        // additional level!
+        levels.emplace_back(b, true);
 
+        totalSaveObjectData = b.inc<int32_t>();
 
-            worldObjects(b),
-            totalSaveObjectData(b.inc<int32_t>()) {
-
-        prt3(bufferSize, worldObjects.size(), totalSaveObjectData);
-        assert(worldObjects.size() == totalSaveObjectData);
-
-        for (auto &wo : worldObjects) {
-            wo.parseAdditionalData(b); //readEntityV5
+        prt3(bufferSize, levels.size(), totalSaveObjectData);
+        int64_t total_objects = 0;
+        for (auto &i : levels) {
+            total_objects += i.worldObjects.size();
+            prt(i.worldObjects.size());
         }
-        collectedObjects.emplace(b);// = b.inc<int32_t>();
+        prt(total_objects);
 
-        assert(totalSaveObjectData == worldObjects.size());
+        assert(total_objects == totalSaveObjectData || true);
+//        prt(worldObjects.size());
+        for (auto &i : levels) {
+            for (auto &wo : i.worldObjects) {
+                //wo.parseAdditionalData(b); //readEntityV5
+                worldObjects.push_back(&wo);
+            }
+        }
+        //collectedObjects.emplace(b);// = b.inc<int32_t>();
+
+        //assert(totalSaveObjectData == total_objects);
 
 
         auto &worldObjects2 = worldObjects;
-        for (int32_t i = 0; i < totalSaveObjectData; ++i) {
-            auto &wo = worldObjects[i];
+        for (int32_t i = 0; i < total_objects; ++i) {
+            auto &wo = *worldObjects[i];
             //auto &v = typepath_to_ordered_indexes[wo.typePath];
             ordered_indexes.insert(lower_bound2(ordered_indexes.begin(), ordered_indexes.end(), [&wo, &worldObjects2](const std::size_t o) {
-                return worldObjects2[o].instanceName < wo.instanceName;
+                return worldObjects2[o]->instanceName < wo.instanceName;
             }), i);
         }
 
@@ -2470,9 +2612,9 @@ struct SatisfactorySavPayload {
     std::size_t findWorldObject(const RepeatedPrimitiveType<char> &path) const {
         auto &worldObjects2 = worldObjects;
         auto i = lower_bound2(ordered_indexes.begin(), ordered_indexes.end(), [&path, &worldObjects2](const std::size_t o) {
-            return worldObjects2[o].instanceName < path;
+            return worldObjects2[o]->instanceName < path;
         });
-        if (i != ordered_indexes.end() && worldObjects2[*i].instanceName == path) {
+        if (i != ordered_indexes.end() && worldObjects2[*i]->instanceName == path) {
             return *i;
         } else {
             return std::numeric_limits<std::size_t>::max();
@@ -2493,8 +2635,8 @@ struct SatisfactorySavPayload {
 
         std::map<Edge, int> edges;
 
-        for (int32_t i = 0; i < totalSaveObjectData; ++i) {
-            auto &wo = worldObjects[i];
+        for (int32_t i = 0; i < worldObjects.size(); ++i) {
+            auto &wo = *worldObjects[i];
             if (wo.worldobjecttype == 1) {
                 const auto &se = std::get<SaveEntity>(wo.v);
                 if (se.components.has_value()) {
@@ -2527,7 +2669,7 @@ struct SatisfactorySavPayload {
 
                         edges[{dottify(wo.typePath.v),
                                label,
-                               dottify(worldObjects[i].typePath.v)}]++;
+                               dottify(worldObjects[i]->typePath.v)}]++;
                     }
                 }
             }
@@ -2558,7 +2700,7 @@ struct SatisfactorySavPayload {
         std::map<std::string, std::size_t> instance_to_circuitid;
 
         for (std::size_t i = 0; i < worldObjects.size(); ++i) {
-            const WorldObject &wo = worldObjects[i];
+            const WorldObject &wo = *worldObjects[i];
             if (!eq("/Script/FactoryGame.FGPowerCircuit", wo.typePath)) {
                 continue;
             }
@@ -2598,10 +2740,10 @@ struct SatisfactorySavPayload {
 
         for (std::size_t i = 0; i < worldObjects.size(); ++i) {
 
-            if (worldObjects[i].worldobjecttype != 0) {
+            if (worldObjects[i]->worldobjecttype != 0) {
                 continue;
             }
-            const SaveComponent &sc = std::get<SaveComponent>(worldObjects[i].v);
+            const SaveComponent &sc = std::get<SaveComponent>(worldObjects[i]->v);
             if (!sc.DataFields.has_value()) {
                 continue;
             }
@@ -2639,9 +2781,9 @@ struct SatisfactorySavPayload {
 
 
         auto isRelevant = [&](std::size_t i) -> bool {
-            const auto &wo = worldObjects[i];
+            const auto &wo = *worldObjects[i];
 
-            if (contains("Build_FrackingExtractor", worldObjects[i].typePath) || contains("Build_MinerMk", worldObjects[i].typePath) || contains("OilPump", worldObjects[i].typePath) || contains("WaterPump", worldObjects[i].typePath)) {
+            if (contains("Build_FrackingExtractor", worldObjects[i]->typePath) || contains("Build_MinerMk", worldObjects[i]->typePath) || contains("OilPump", worldObjects[i]->typePath) || contains("WaterPump", worldObjects[i]->typePath)) {
                 return true;
             }
 
@@ -2713,7 +2855,7 @@ struct SatisfactorySavPayload {
         const auto eqClassHasInputs = [&](const std::size_t eqclassid) -> bool {
             bool gotinputs = false;
             iterateEqClass(eqclassid, [&](const std::size_t woid) {
-                const auto &wo = worldObjects[woid];
+                const auto &wo = *worldObjects[woid];
                 bool is_resource = contains("Build_FrackingExtractor", wo.instanceName) || contains("Build_OilPump", wo.instanceName) || contains("Build_MinerMk", wo.instanceName) || contains("OilPump", wo.instanceName) || contains("WaterPump", wo.instanceName);
 
                 if (is_resource || contains("Output0", wo.instanceName) || contains("Output1", wo.instanceName) || contains("Output2", wo.instanceName) || contains("PipeOutputFactory", wo.instanceName)) {
@@ -2734,7 +2876,7 @@ struct SatisfactorySavPayload {
 
             const auto cb = [&](const std::size_t j) {
 
-                const auto &wo = worldObjects[j];
+                const auto &wo = *worldObjects[j];
 
                 std::string mmm = std::string(wo.instanceName.v, wo.instanceName.n - 1);
                 mmm += ".StorageInventory";
@@ -2744,14 +2886,14 @@ struct SatisfactorySavPayload {
                 }
                 //std::cout << "AHA ! this exists: " << mmm << "   " << worldObjects[inventoryid].worldobjecttype << std::endl;
 
-                if (worldObjects[inventoryid].worldobjecttype != 0) {
+                if (worldObjects[inventoryid]->worldobjecttype != 0) {
                     return true;
                 }
 //                    const SaveComponent &sc = std::get<SaveComponent>(wo.v);
 //                    if (contains("Conveyor", wo.instanceName) || contains("StorageContainer", wo.instanceName) || contains("Pipeline", wo.instanceName) || contains("Valve", wo.instanceName) || contains("PipeStorageTank", wo.instanceName) || contains("IndustrialTank", wo.instanceName)) {
 
 
-                const SaveComponent &inventorysc = std::get<SaveComponent>(worldObjects[inventoryid].v);
+                const SaveComponent &inventorysc = std::get<SaveComponent>(worldObjects[inventoryid]->v);
                 for (const auto &df : inventorysc.DataFields.value().props) {
                     if (!eq("mInventoryStacks", df->name)) {
                         continue;
@@ -2802,7 +2944,7 @@ struct SatisfactorySavPayload {
 //            assert (isRelevant(i));
 
 
-            const auto &wo = worldObjects[i];
+            const auto &wo = *worldObjects[i];
             if (wo.worldobjecttype != 1 || !contains("/Game/FactoryGame/Buildable/Factory", wo.typePath)) {
                 return std::optional<AggregatingId>();
             }
@@ -2812,7 +2954,7 @@ struct SatisfactorySavPayload {
 //            if (contains("WaterPump", wo.typePath)) {
 //                aid.recipe = "Water";
 //            }else
-                if (contains("OilPump", wo.typePath)) {
+            if (contains("OilPump", wo.typePath)) {
                 aid.recipe = "Recipe_CrudeOil_C";
             }
 
@@ -2925,7 +3067,7 @@ struct SatisfactorySavPayload {
                 GroupedBuildings &gb = groups[aid.value()];
 
                 gb.buildingids.insert(i); //examplePosition
-                gb.examplePosition = std::get<SaveEntity>(worldObjects[i].v).Position;
+                gb.examplePosition = std::get<SaveEntity>(worldObjects[i]->v).Position;
 
                 for (const auto &mmm : aid.value().outputs_eqclasses) {
                     relevant_eqclasses[mmm.second].sources.insert(i);
@@ -2934,12 +3076,12 @@ struct SatisfactorySavPayload {
                     relevant_eqclasses[mmm].sinks.insert(i);
                 }
 
-//                std::string powerinfoname(worldObjects[i].instanceName.v);
+//                std::string powerinfoname(worldObjects[i]->instanceName.v);
 //                powerinfoname += ".powerInfo";
 //                std::size_t powerindex = findWorldObject(powerinfoname);
 //                assert(powerindex < worldObjects.size());
                 bool foundCurrentPotential = false;
-                for (const std::unique_ptr<PropertyType> &powerproperty : std::get<SaveEntity>(worldObjects[i].v).DataFields.value().props) {
+                for (const std::unique_ptr<PropertyType> &powerproperty : std::get<SaveEntity>(worldObjects[i]->v).DataFields.value().props) {
                     if (eq("mCurrentPotential", powerproperty->name)) {  // this is the target percentage, the underclocking/overclocking amount
                         float mCurrentPotential = std::get<float>(powerproperty->content);
                         //prt(mCurrentPotential);
@@ -3034,7 +3176,7 @@ struct SatisfactorySavPayload {
             assert (isRelevant(i));
 
 
-            const auto &wo = worldObjects[i];
+            const auto &wo = *worldObjects[i];
             if (wo.worldobjecttype != 0) {
                 return;
             }
@@ -3044,7 +3186,7 @@ struct SatisfactorySavPayload {
             const SaveComponent &sc = std::get<SaveComponent>(wo.v);
             const std::size_t parentid = findWorldObject(sc.ParentEntityName);
             assert(parentid < worldObjects.size());
-            const auto &parent = worldObjects[parentid];
+            const auto &parent = *worldObjects[parentid];
             assert(parent.worldobjecttype == 1);
             const SaveEntity &scparent = std::get<SaveEntity>(parent.v);
             if (scparent.DataFields.has_value()) {
@@ -3132,7 +3274,7 @@ struct SatisfactorySavPayload {
                     continue;
                 }
                 for (auto &i : aid_group.second.buildingids) {
-                    const auto &wo2 = worldObjects[i];
+                    const auto &wo2 = *worldObjects[i];
                     if (contains("Build_FrackingExtractor", wo2.typePath) || contains("Build_MinerMk", wo2.typePath) || contains("OilPump", wo2.typePath) || contains("WaterPump", wo2.typePath)) {
                         aid_group.second.worth_mentioning = true;
                         continue;
@@ -3182,9 +3324,9 @@ struct SatisfactorySavPayload {
 
 //                Color color = colorify(aid_group.first.circuitid);
 
-                double colorseed1 = double((aid_group.first.circuitid * 777) %  circuitid_to_index.size())  / circuitid_to_index.size();
-                double colorseed2 = double((aid_group.first.circuitid * 7777) %  circuitid_to_index.size())  / circuitid_to_index.size();
-                double colorseed3 = double((aid_group.first.circuitid * 77777) %  circuitid_to_index.size())  / circuitid_to_index.size();
+                double colorseed1 = double((aid_group.first.circuitid * 777) % circuitid_to_index.size()) / circuitid_to_index.size();
+                double colorseed2 = double((aid_group.first.circuitid * 7777) % circuitid_to_index.size()) / circuitid_to_index.size();
+                double colorseed3 = double((aid_group.first.circuitid * 77777) % circuitid_to_index.size()) / circuitid_to_index.size();
                 oss << ((std::size_t) &aid_group) << " [color=\"" << colorseed1 << " " << (0.3 + 0.4 * colorseed2) << " " << (0.8 + 0.2 * colorseed3) << "\", label=\"";
                 if (aid_group.first.recipe.starts_with("Recipe_")) {
 
@@ -3208,7 +3350,7 @@ struct SatisfactorySavPayload {
                         oss << string_format("+ %3d %6.2f %8.2f %s\\l", (int) base, (base * perminute), (base * perminute * intotal), w.resources[i.first].mDisplayName.c_str());
                     }
                 } else {
-                    oss << aid_group.second.buildingids.size() << " X " << aid_group.first.recipe << "\\l" << "circuit " << aid_group.first.circuitid << "\\l" ;
+                    oss << aid_group.second.buildingids.size() << " X " << aid_group.first.recipe << "\\l" << "circuit " << aid_group.first.circuitid << "\\l";
                 }
 //                oss << "\\n(" << aid_group.second.buildingids.size() << ", " << aid_group.first.inputeqclasses.size() << ", " << aid_group.first.outputs_eqclasses.size() << ")\\n";
                 oss << "\\l";
@@ -3282,8 +3424,27 @@ struct SatisfactorySav {
             isModdedSave(b.inc<int32_t>())
 //            , worldObjects(ptr, offset)
     {
+        prt6(headerVersion, saveVersion, buildVersion, sessionVisibility, editorObjectVersion, isModdedSave);
+        prt3(playTimeSeconds, saveDateMsTicks, modMetaData);
+
+
+        {
+            // HACK, i know the compressed stuff starts with 0x9E2A83C1 but i dont know the offset, there seems to be some additional junk where we are atm
+
+            prt2(b.offset, b.maxoffset);
+
+            while (b.peak<int64_t>() != 0x9E2A83C1 && b.offset < b.maxoffset) {
+                b.skip(1);
+
+            }
+            prt(b.offset);
+            assert(b.peak<int64_t>() == 0x9E2A83C1);
+            //	  assert(false);
+        }
+
         std::size_t totalsize_uncompressed = 0;
         while (b.offset < b.maxoffset) {
+
             totalsize_uncompressed += chunks.emplace_back(b).currentChunkUncompressedLength;
         }
         prt2(chunks.size(), totalsize_uncompressed);
@@ -3304,7 +3465,8 @@ struct SatisfactorySav {
         }
         //std::cout << "============================================== b2 ======================================\n";
         Builder b2{uncompressedData.data(), 0, uncompressedData.size(), b.buildVersion};
-
+        printMemory(uncompressedData.data(), uncompressedData.data() + 128);
+        prt2(uncompressedData.size(), b2.peak<int32_t>());
         payload.emplace(b2);
 
     }
@@ -3740,7 +3902,7 @@ void printJson(W &w, const ArrayProperty::StructBS &t) noexcept {
 
     if (eq(StructLinearColor::tname, t.structInnerType)) {
         printJson(w, std::get<std::vector<StructLinearColor> >(t.properties));
-    }else     if (eq(StructVector::tname, t.structInnerType)) {
+    } else if (eq(StructVector::tname, t.structInnerType)) {
         printJson(w, std::get<std::vector<StructVector> >(t.properties));
     } else { // if (eq("RemovedInstance", structInnerType)) {
         printJson(w, std::get<std::vector<SerializedFields> >(t.properties));
@@ -3947,7 +4109,8 @@ int main() {
 
 
     World world;
-    world.loadFromCommunityResourcesDocsJson("/home/donf/fsrc/satisfactory/satisfactorysimulator/DocsV0.5.0.11.json");
+    //world.loadFromCommunityResourcesDocsJson("/home/donf/fsrc/satisfactory/satisfactorysimulator/DocsV0.5.0.11.json");
+    //        world.loadFromCommunityResourcesDocsJson("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/Docs_christmas_2021-2022.json");
 
     //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_2004-181613.sav");
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_autosave_0.sav");
@@ -3957,13 +4120,22 @@ int main() {
 //    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_281121-205216.sav");
 
 
-    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/therapy_autosave_0.sav");
+//    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/therapy_autosave_0.sav");
+//    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_160222-230557.sav");
+//        MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_190222-230928.sav");
+//	        MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_010123-221844.sav");
+//    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_010123-123753.sav");
+//    MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_050123-213906.sav");
+//            MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/je-brault-satisfactory-world-35milpointsminute_1700hr_Update7.sav");
+	                MemoryMappedFile mmf("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/mmm2_080123-094434.sav");
     mmf.initialise();
     prt(mmf.size);
     assert(mmf.d);
 //    std::size_t current_offset = 0;// reinterpret_cast<int32_t *>(mmf.d);
     Builder b{mmf.d, 0, mmf.size};
     SatisfactorySav sav(b);
+//    world.loadFromCommunityResourcesDocsJson("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/Docs_christmas_2021-2022.json");
+    world.loadFromCommunityResourcesDocsJson("/home/donf/fsrc/satisfactory/satisfactory-sav-analyser/DocsU5.json");
     prt3(sav.headerVersion, sav.saveVersion, sav.buildVersion);
     prt(sav.worldType);
     prt(sav.worldProperties);
